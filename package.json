@@ -1,0 +1,16 @@
+{
+  "name": "smart-scale-scanner",
+  "version": "0.1.0",
+  "description": "Smart Scale Accessibility Scanner: WCAG 2.2 AA scans that end in a fix file, not a badge.",
+  "private": true,
+  "type": "module",
+  "bin": { "ssa": "./bin/ssa.js" },
+  "scripts": {
+    "scan": "node src/cli.ts scan",
+    "smoke": "node src/cli.ts scan https://smartscaleagent.com --max-pages 2 --out .scans/smoke"
+  },
+  "engines": { "node": ">=22.18" },
+  "dependencies": {
+    "axe-core": "^4.10.3"
+  }
+}

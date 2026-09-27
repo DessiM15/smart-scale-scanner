@@ -1,0 +1,14 @@
+Smart Scale Accessibility Scanner
+Copyright (c) 2026 Smart Scale, LLC. All rights reserved.
+
+This software and its source code are proprietary to Smart Scale, LLC.
+No part of it may be copied, modified, distributed, sublicensed, or used
+to provide a service to third parties without prior written permission
+from Smart Scale, LLC.
+
+This software includes axe-core (Deque Systems, Inc.), used under the
+Mozilla Public License 2.0. axe-core's license terms apply to that
+component only.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. Scan
+results are not legal advice and do not certify compliance with any law.
