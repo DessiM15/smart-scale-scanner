@@ -1,0 +1,2843 @@
+{
+  "tool": "Smart Scale Accessibility Scanner",
+  "version": "0.1.0",
+  "standard": "WCAG 2.2 Level AA",
+  "scannedAt": "2026-09-27T15:42:31.269Z",
+  "base": "https://loved-beauty.vercel.app",
+  "label": "Loved Beauty",
+  "stack": "Next.js, hosted on Vercel",
+  "pageSource": "sitemap",
+  "durationMs": 195925,
+  "pages": [
+    {
+      "path": "/",
+      "url": "https://loved-beauty.vercel.app/",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Loved Beauty | Clean, Vegan Lip Gloss, Lip Care & Shimmer Sprays",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 5,
+        "undetermined": {
+          "imgNode": 4
+        },
+        "incomplete": {
+          "color-contrast": 4
+        },
+        "passes": 46
+      },
+      "structure": {
+        "title": "Loved Beauty | Clean, Vegan Lip Gloss, Lip Care & Shimmer Sprays",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Beauty ThatLoves You Back"
+          },
+          {
+            "level": 2,
+            "text": "Shop Our Bestsellers"
+          },
+          {
+            "level": 3,
+            "text": "Lustre Lip Gloss"
+          },
+          {
+            "level": 3,
+            "text": "Hyaluronic Acid Lip Gloss"
+          },
+          {
+            "level": 3,
+            "text": "Ultra Light Lip Oil"
+          },
+          {
+            "level": 3,
+            "text": "Shimmer Glow Oil Spray"
+          },
+          {
+            "level": 2,
+            "text": "Your bag"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 10,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 7,
+        "newTabSamples": [
+          "Loved Beauty on Instagram",
+          "Loved Beauty on TikTok",
+          "Instagram",
+          "TikTok"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 45,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [
+          {
+            "index": 44,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 45,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          }
+        ],
+        "trap": null,
+        "reachedEnd": true
+      },
+      "reflow": {
+        "horizontalScroll": false,
+        "overflowPx": 0,
+        "offenders": []
+      },
+      "reducedMotion": {
+        "longAnimationsWithReduce": 0,
+        "autoplayWithReduce": 0
+      }
+    },
+    {
+      "path": "/shop",
+      "url": "https://loved-beauty.vercel.app/shop",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Shop All | Vegan Lip Gloss, Lip Care & Shimmer Sprays | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.pointer-events-none",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "help": "Heading levels should only increase by one",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=axeAPI",
+            "wcag": [],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<h3 class=\"h-display text-[1.2rem] md:text-[1.5rem]\"><a class=\"text-ink\" href=\"/products/lustre-lip-gloss\">Lustre Lip Gloss</a></h3>",
+                "target": ".is-in:nth-child(1) > .pt-3\\.5.text-left.flex-1 > h3",
+                "message": "Heading order invalid"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 5,
+        "undetermined": {
+          "imgNode": 3
+        },
+        "incomplete": {
+          "aria-prohibited-attr": 2,
+          "color-contrast": 3
+        },
+        "passes": 48
+      },
+      "structure": {
+        "title": "Shop All | Vegan Lip Gloss, Lip Care & Shimmer Sprays | Loved Beauty",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Shop All"
+          },
+          {
+            "level": 3,
+            "text": "Lustre Lip Gloss"
+          },
+          {
+            "level": 3,
+            "text": "Hyaluronic Acid Lip Gloss"
+          },
+          {
+            "level": 3,
+            "text": "Ultra Light Lip Oil"
+          },
+          {
+            "level": 3,
+            "text": "Peptide Lip Lacquer"
+          },
+          {
+            "level": 3,
+            "text": "Lip Liner Pencil"
+          },
+          {
+            "level": 3,
+            "text": "Sugar Lip Scrub"
+          },
+          {
+            "level": 3,
+            "text": "Soft Sphere Lip Balm"
+          },
+          {
+            "level": 3,
+            "text": "Shimmer Highlighter Powder Spray"
+          },
+          {
+            "level": 3,
+            "text": "Shimmer Glow Setting Spray"
+          },
+          {
+            "level": 3,
+            "text": "Shimmer Glow Oil Spray"
+          },
+          {
+            "level": 3,
+            "text": "The Lip Ritual Set"
+          },
+          {
+            "level": 3,
+            "text": "The Glow Duo"
+          },
+          {
+            "level": 2,
+            "text": "Your bag"
+          }
+        ],
+        "headingSkips": [
+          {
+            "from": 1,
+            "to": 3,
+            "text": "Lustre Lip Gloss"
+          }
+        ],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 22,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 7,
+        "newTabSamples": [
+          "Loved Beauty on Instagram",
+          "Loved Beauty on TikTok",
+          "Instagram",
+          "TikTok"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [
+          {
+            "index": 71,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 72,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          }
+        ],
+        "trap": null,
+        "reachedEnd": false
+      },
+      "reflow": {
+        "horizontalScroll": true,
+        "overflowPx": 6,
+        "offenders": [
+          "li.shrink-0",
+          "a.link-underline.text-[0.7rem]",
+          "li.shrink-0",
+          "a.link-underline.text-[0.7rem]",
+          "button.inline-flex.items-center",
+          "div.absolute.inset-y-0"
+        ]
+      }
+    },
+    {
+      "path": "/about",
+      "url": "https://loved-beauty.vercel.app/about",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Our Story | Clean, Vegan Beauty from Houston, Texas | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#8e6e5c",
+            "bg": "#f6efe9",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 4.06,
+            "required": 4.5,
+            "count": 1,
+            "classes": "",
+            "sample": "Our story"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 6,
+        "undetermined": {},
+        "incomplete": {},
+        "passes": 46
+      },
+      "structure": {
+        "title": "Our Story | Clean, Vegan Beauty from Houston, Texas | Loved Beauty",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Beauty ThatLoves You Back"
+          },
+          {
+            "level": 2,
+            "text": "Gentle formulas. Honest ingredients."
+          },
+          {
+            "level": 2,
+            "text": "Your bag"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 4,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 7,
+        "newTabSamples": [
+          "Loved Beauty on Instagram",
+          "Loved Beauty on TikTok",
+          "Instagram",
+          "TikTok"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 31,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [
+          {
+            "index": 10,
+            "tag": "A",
+            "name": "Shop the Collection",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "a.btn.btn-primary opacity:0",
+            "offscreen": false,
+            "href": "/shop"
+          },
+          {
+            "index": 30,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 31,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          }
+        ],
+        "trap": null,
+        "reachedEnd": true
+      },
+      "reflow": {
+        "horizontalScroll": false,
+        "overflowPx": 0,
+        "offenders": []
+      }
+    },
+    {
+      "path": "/faq",
+      "url": "https://loved-beauty.vercel.app/faq",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "FAQ | Shipping, Returns & Ingredients | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#8e6e5c",
+            "bg": "#f6efe9",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 4.06,
+            "required": 4.5,
+            "count": 1,
+            "classes": "",
+            "sample": "Help"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 6,
+        "undetermined": {},
+        "incomplete": {},
+        "passes": 48
+      },
+      "structure": {
+        "title": "FAQ | Shipping, Returns & Ingredients | Loved Beauty",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Frequently asked questions"
+          },
+          {
+            "level": 2,
+            "text": "Your bag"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 3,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 7,
+        "newTabSamples": [
+          "Loved Beauty on Instagram",
+          "Loved Beauty on TikTok",
+          "Instagram",
+          "TikTok"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [
+          {
+            "index": 39,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 40,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          },
+          {
+            "index": 79,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 80,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          }
+        ],
+        "trap": null,
+        "reachedEnd": false
+      }
+    },
+    {
+      "path": "/contact",
+      "url": "https://loved-beauty.vercel.app/contact",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Contact Us | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#8e6e5c",
+            "bg": "#f6efe9",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 4.06,
+            "required": 4.5,
+            "count": 1,
+            "classes": "",
+            "sample": "Say hello"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 6,
+        "undetermined": {},
+        "incomplete": {},
+        "passes": 47
+      },
+      "structure": {
+        "title": "Contact Us | Loved Beauty",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "We’d love to hear from you."
+          },
+          {
+            "level": 2,
+            "text": "Your bag"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 3,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 9,
+        "newTabSamples": [
+          "@lovedbeautyllc",
+          "@lovedbeautyshop",
+          "Loved Beauty on Instagram",
+          "Loved Beauty on TikTok"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 39,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [
+          {
+            "index": 38,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 39,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          }
+        ],
+        "trap": null,
+        "reachedEnd": true
+      }
+    },
+    {
+      "path": "/policies/shipping-returns",
+      "url": "https://loved-beauty.vercel.app/policies/shipping-returns",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Shipping & Returns | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#8e6e5c",
+            "bg": "#f6efe9",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 4.06,
+            "required": 4.5,
+            "count": 1,
+            "classes": "",
+            "sample": "Policies"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 6,
+        "undetermined": {},
+        "incomplete": {},
+        "passes": 47
+      },
+      "structure": {
+        "title": "Shipping & Returns | Loved Beauty",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Shipping & Returns"
+          },
+          {
+            "level": 2,
+            "text": "Shipping"
+          },
+          {
+            "level": 2,
+            "text": "Returns & exchanges"
+          },
+          {
+            "level": 2,
+            "text": "Damaged or incorrect orders"
+          },
+          {
+            "level": 2,
+            "text": "Your bag"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 3,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 7,
+        "newTabSamples": [
+          "Loved Beauty on Instagram",
+          "Loved Beauty on TikTok",
+          "Instagram",
+          "TikTok"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 62,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [
+          {
+            "index": 30,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 31,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          },
+          {
+            "index": 61,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 62,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          }
+        ],
+        "trap": null,
+        "reachedEnd": true
+      }
+    },
+    {
+      "path": "/policies/privacy",
+      "url": "https://loved-beauty.vercel.app/policies/privacy",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Privacy Policy | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#8e6e5c",
+            "bg": "#f6efe9",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 4.06,
+            "required": 4.5,
+            "count": 1,
+            "classes": "",
+            "sample": "Policies"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 6,
+        "undetermined": {},
+        "incomplete": {},
+        "passes": 47
+      },
+      "structure": {
+        "title": "Privacy Policy | Loved Beauty",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Privacy Policy"
+          },
+          {
+            "level": 2,
+            "text": "Information we collect"
+          },
+          {
+            "level": 2,
+            "text": "How we use it"
+          },
+          {
+            "level": 2,
+            "text": "Sharing"
+          },
+          {
+            "level": 2,
+            "text": "Your choices"
+          },
+          {
+            "level": 2,
+            "text": "Contact"
+          },
+          {
+            "level": 2,
+            "text": "Your bag"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 3,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 7,
+        "newTabSamples": [
+          "Loved Beauty on Instagram",
+          "Loved Beauty on TikTok",
+          "Instagram",
+          "TikTok"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 64,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [
+          {
+            "index": 31,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 32,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          },
+          {
+            "index": 63,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 64,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          }
+        ],
+        "trap": null,
+        "reachedEnd": true
+      }
+    },
+    {
+      "path": "/policies/terms",
+      "url": "https://loved-beauty.vercel.app/policies/terms",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Terms of Service | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#8e6e5c",
+            "bg": "#f6efe9",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 4.06,
+            "required": 4.5,
+            "count": 1,
+            "classes": "",
+            "sample": "Policies"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 6,
+        "undetermined": {},
+        "incomplete": {},
+        "passes": 47
+      },
+      "structure": {
+        "title": "Terms of Service | Loved Beauty",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Terms of Service"
+          },
+          {
+            "level": 2,
+            "text": "Products"
+          },
+          {
+            "level": 2,
+            "text": "Pricing & payment"
+          },
+          {
+            "level": 2,
+            "text": "Orders"
+          },
+          {
+            "level": 2,
+            "text": "Promotions"
+          },
+          {
+            "level": 2,
+            "text": "Intellectual property"
+          },
+          {
+            "level": 2,
+            "text": "Contact"
+          },
+          {
+            "level": 2,
+            "text": "Your bag"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 3,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 7,
+        "newTabSamples": [
+          "Loved Beauty on Instagram",
+          "Loved Beauty on TikTok",
+          "Instagram",
+          "TikTok"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 62,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [
+          {
+            "index": 30,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 31,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          },
+          {
+            "index": 61,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 62,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          }
+        ],
+        "trap": null,
+        "reachedEnd": true
+      }
+    },
+    {
+      "path": "/collections/bestsellers",
+      "url": "https://loved-beauty.vercel.app/collections/bestsellers",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Bestsellers | Loved Beauty | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "help": "Heading levels should only increase by one",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=axeAPI",
+            "wcag": [],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<h3 class=\"h-display text-[1.2rem] md:text-[1.5rem]\"><a class=\"text-ink\" href=\"/products/lustre-lip-gloss\">Lustre Lip Gloss</a></h3>",
+                "target": ".is-in:nth-child(1) > .pt-3\\.5.text-left.flex-1 > h3",
+                "message": "Heading order invalid"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 5,
+        "undetermined": {
+          "imgNode": 4
+        },
+        "incomplete": {
+          "color-contrast": 4
+        },
+        "passes": 47
+      },
+      "structure": {
+        "title": "Bestsellers | Loved Beauty | Loved Beauty",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Bestsellers"
+          },
+          {
+            "level": 3,
+            "text": "Lustre Lip Gloss"
+          },
+          {
+            "level": 3,
+            "text": "Hyaluronic Acid Lip Gloss"
+          },
+          {
+            "level": 3,
+            "text": "Ultra Light Lip Oil"
+          },
+          {
+            "level": 3,
+            "text": "Shimmer Glow Oil Spray"
+          },
+          {
+            "level": 3,
+            "text": "Shimmer Glow Setting Spray"
+          },
+          {
+            "level": 2,
+            "text": "Your bag"
+          }
+        ],
+        "headingSkips": [
+          {
+            "from": 1,
+            "to": 3,
+            "text": "Lustre Lip Gloss"
+          }
+        ],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 11,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 7,
+        "newTabSamples": [
+          "Loved Beauty on Instagram",
+          "Loved Beauty on TikTok",
+          "Instagram",
+          "TikTok"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [
+          {
+            "index": 50,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 51,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          }
+        ],
+        "trap": null,
+        "reachedEnd": false
+      }
+    },
+    {
+      "path": "/collections/lips",
+      "url": "https://loved-beauty.vercel.app/collections/lips",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Lips | Vegan Lip Gloss, Lip Oil & Lip Liner | Loved Beauty | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.pointer-events-none",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "help": "Heading levels should only increase by one",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=axeAPI",
+            "wcag": [],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<h3 class=\"h-display text-[1.2rem] md:text-[1.5rem]\"><a class=\"text-ink\" href=\"/products/lustre-lip-gloss\">Lustre Lip Gloss</a></h3>",
+                "target": ".is-in:nth-child(1) > .pt-3\\.5.text-left.flex-1 > h3",
+                "message": "Heading order invalid"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 5,
+        "undetermined": {
+          "imgNode": 3
+        },
+        "incomplete": {
+          "color-contrast": 3
+        },
+        "passes": 48
+      },
+      "structure": {
+        "title": "Lips | Vegan Lip Gloss, Lip Oil & Lip Liner | Loved Beauty | Loved Beauty",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Lips"
+          },
+          {
+            "level": 3,
+            "text": "Lustre Lip Gloss"
+          },
+          {
+            "level": 3,
+            "text": "Hyaluronic Acid Lip Gloss"
+          },
+          {
+            "level": 3,
+            "text": "Ultra Light Lip Oil"
+          },
+          {
+            "level": 3,
+            "text": "Peptide Lip Lacquer"
+          },
+          {
+            "level": 3,
+            "text": "Lip Liner Pencil"
+          },
+          {
+            "level": 2,
+            "text": "Your bag"
+          }
+        ],
+        "headingSkips": [
+          {
+            "from": 1,
+            "to": 3,
+            "text": "Lustre Lip Gloss"
+          }
+        ],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 11,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 7,
+        "newTabSamples": [
+          "Loved Beauty on Instagram",
+          "Loved Beauty on TikTok",
+          "Instagram",
+          "TikTok"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 52,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [
+          {
+            "index": 2,
+            "tag": "A",
+            "name": "Free U.S. shipping on orders $200+",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "a.absolute.inset-y-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          },
+          {
+            "index": 51,
+            "tag": "BUTTON",
+            "name": "Close bag",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false
+          },
+          {
+            "index": 52,
+            "tag": "A",
+            "name": "Shop all",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div.fixed.inset-0 aria-hidden",
+            "offscreen": false,
+            "href": "/shop"
+          }
+        ],
+        "trap": null,
+        "reachedEnd": true
+      }
+    },
+    {
+      "path": "/",
+      "url": "https://loved-beauty.vercel.app/",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Loved Beauty | Clean, Vegan Lip Gloss, Lip Care & Shimmer Sprays",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 2,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              },
+              {
+                "html": "<div id=\"mobile-menu\" class=\"fixed inset-0 z-50 flex flex-col bg-cream transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] md:hidden -translate-x-full\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\">",
+                "target": "#mobile-menu",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 5,
+        "undetermined": {
+          "bgGradient": 4
+        },
+        "incomplete": {
+          "color-contrast": 4
+        },
+        "passes": 46
+      }
+    },
+    {
+      "path": "/shop",
+      "url": "https://loved-beauty.vercel.app/shop",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Shop All | Vegan Lip Gloss, Lip Care & Shimmer Sprays | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 2,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.pointer-events-none",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              },
+              {
+                "html": "<div id=\"mobile-menu\" class=\"fixed inset-0 z-50 flex flex-col bg-cream transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] md:hidden -translate-x-full\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\">",
+                "target": "#mobile-menu",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "help": "Heading levels should only increase by one",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=axeAPI",
+            "wcag": [],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<h3 class=\"h-display text-[1.2rem] md:text-[1.5rem]\"><a class=\"text-ink\" href=\"/products/lustre-lip-gloss\">Lustre Lip Gloss</a></h3>",
+                "target": ".is-in:nth-child(1) > .pt-3\\.5.text-left.flex-1 > h3",
+                "message": "Heading order invalid"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 5,
+        "undetermined": {
+          "elmPartiallyObscured": 1,
+          "imgNode": 2
+        },
+        "incomplete": {
+          "aria-prohibited-attr": 2,
+          "color-contrast": 3
+        },
+        "passes": 49
+      }
+    },
+    {
+      "path": "/about",
+      "url": "https://loved-beauty.vercel.app/about",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Our Story | Clean, Vegan Beauty from Houston, Texas | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 2,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              },
+              {
+                "html": "<div id=\"mobile-menu\" class=\"fixed inset-0 z-50 flex flex-col bg-cream transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] md:hidden -translate-x-full\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\">",
+                "target": "#mobile-menu",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#8e6e5c",
+            "bg": "#f6efe9",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 4.06,
+            "required": 4.5,
+            "count": 1,
+            "classes": "",
+            "sample": "Our story"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 6,
+        "undetermined": {},
+        "incomplete": {},
+        "passes": 46
+      }
+    },
+    {
+      "path": "/faq",
+      "url": "https://loved-beauty.vercel.app/faq",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "FAQ | Shipping, Returns & Ingredients | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 2,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              },
+              {
+                "html": "<div id=\"mobile-menu\" class=\"fixed inset-0 z-50 flex flex-col bg-cream transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] md:hidden -translate-x-full\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\">",
+                "target": "#mobile-menu",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#8e6e5c",
+            "bg": "#f6efe9",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 4.06,
+            "required": 4.5,
+            "count": 1,
+            "classes": "",
+            "sample": "Help"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 6,
+        "undetermined": {},
+        "incomplete": {},
+        "passes": 48
+      }
+    },
+    {
+      "path": "/contact",
+      "url": "https://loved-beauty.vercel.app/contact",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Contact Us | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 2,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              },
+              {
+                "html": "<div id=\"mobile-menu\" class=\"fixed inset-0 z-50 flex flex-col bg-cream transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] md:hidden -translate-x-full\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\">",
+                "target": "#mobile-menu",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#8e6e5c",
+            "bg": "#f6efe9",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 4.06,
+            "required": 4.5,
+            "count": 1,
+            "classes": "",
+            "sample": "Say hello"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 6,
+        "undetermined": {},
+        "incomplete": {},
+        "passes": 47
+      }
+    },
+    {
+      "path": "/policies/shipping-returns",
+      "url": "https://loved-beauty.vercel.app/policies/shipping-returns",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Shipping & Returns | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 2,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              },
+              {
+                "html": "<div id=\"mobile-menu\" class=\"fixed inset-0 z-50 flex flex-col bg-cream transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] md:hidden -translate-x-full\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\">",
+                "target": "#mobile-menu",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#8e6e5c",
+            "bg": "#f6efe9",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 4.06,
+            "required": 4.5,
+            "count": 1,
+            "classes": "",
+            "sample": "Policies"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 6,
+        "undetermined": {},
+        "incomplete": {},
+        "passes": 47
+      }
+    },
+    {
+      "path": "/policies/privacy",
+      "url": "https://loved-beauty.vercel.app/policies/privacy",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Privacy Policy | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 2,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              },
+              {
+                "html": "<div id=\"mobile-menu\" class=\"fixed inset-0 z-50 flex flex-col bg-cream transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] md:hidden -translate-x-full\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\">",
+                "target": "#mobile-menu",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#8e6e5c",
+            "bg": "#f6efe9",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 4.06,
+            "required": 4.5,
+            "count": 1,
+            "classes": "",
+            "sample": "Policies"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 6,
+        "undetermined": {},
+        "incomplete": {},
+        "passes": 47
+      }
+    },
+    {
+      "path": "/policies/terms",
+      "url": "https://loved-beauty.vercel.app/policies/terms",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Terms of Service | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 2,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              },
+              {
+                "html": "<div id=\"mobile-menu\" class=\"fixed inset-0 z-50 flex flex-col bg-cream transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] md:hidden -translate-x-full\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\">",
+                "target": "#mobile-menu",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#8e6e5c",
+            "bg": "#f6efe9",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 4.06,
+            "required": 4.5,
+            "count": 1,
+            "classes": "",
+            "sample": "Policies"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 6,
+        "undetermined": {},
+        "incomplete": {},
+        "passes": 47
+      }
+    },
+    {
+      "path": "/collections/bestsellers",
+      "url": "https://loved-beauty.vercel.app/collections/bestsellers",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Bestsellers | Loved Beauty | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 2,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.inset-0:nth-child(7)",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              },
+              {
+                "html": "<div id=\"mobile-menu\" class=\"fixed inset-0 z-50 flex flex-col bg-cream transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] md:hidden -translate-x-full\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\">",
+                "target": "#mobile-menu",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "help": "Heading levels should only increase by one",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=axeAPI",
+            "wcag": [],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<h3 class=\"h-display text-[1.2rem] md:text-[1.5rem]\"><a class=\"text-ink\" href=\"/products/lustre-lip-gloss\">Lustre Lip Gloss</a></h3>",
+                "target": ".is-in:nth-child(1) > .pt-3\\.5.text-left.flex-1 > h3",
+                "message": "Heading order invalid"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 5,
+        "undetermined": {
+          "elmPartiallyObscured": 1,
+          "imgNode": 2
+        },
+        "incomplete": {
+          "color-contrast": 3
+        },
+        "passes": 48
+      }
+    },
+    {
+      "path": "/collections/lips",
+      "url": "https://loved-beauty.vercel.app/collections/lips",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Lips | Vegan Lip Gloss, Lip Oil & Lip Liner | Loved Beauty | Loved Beauty",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-hidden-focus",
+            "impact": "serious",
+            "help": "ARIA hidden element must not be focusable or contain focusable elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag412"
+            ],
+            "count": 2,
+            "nodes": [
+              {
+                "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+                "target": ".fixed.z-50.pointer-events-none",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              },
+              {
+                "html": "<div id=\"mobile-menu\" class=\"fixed inset-0 z-50 flex flex-col bg-cream transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] md:hidden -translate-x-full\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\">",
+                "target": "#mobile-menu",
+                "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+              }
+            ]
+          },
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "help": "Heading levels should only increase by one",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=axeAPI",
+            "wcag": [],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<h3 class=\"h-display text-[1.2rem] md:text-[1.5rem]\"><a class=\"text-ink\" href=\"/products/lustre-lip-gloss\">Lustre Lip Gloss</a></h3>",
+                "target": ".is-in:nth-child(1) > .pt-3\\.5.text-left.flex-1 > h3",
+                "message": "Heading order invalid"
+              }
+            ]
+          }
+        ],
+        "contrast": [
+          {
+            "fg": "#7c5f4e",
+            "bg": "#dfcfc1",
+            "fontSize": "7.9pt (10.56px)",
+            "ratio": 3.83,
+            "required": 4.5,
+            "count": 3,
+            "classes": "text-[#7c5f4e]",
+            "sample": "Shop"
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "10.5pt (14px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-sm text-plum",
+            "sample": "10% off your first order. No noise."
+          },
+          {
+            "fg": "#6f585d",
+            "bg": "#dfcfc1",
+            "fontSize": "8.2pt (10.88px)",
+            "ratio": 4.28,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-[0.68rem] text-plum",
+            "sample": "By subscribing you agree to receive marketing emails from Lo"
+          }
+        ],
+        "contrastElements": 5,
+        "undetermined": {
+          "elmPartiallyObscured": 1,
+          "imgNode": 2
+        },
+        "incomplete": {
+          "color-contrast": 3
+        },
+        "passes": 49
+      }
+    }
+  ],
+  "summary": {
+    "pages": 10,
+    "pagesWithErrors": 0,
+    "axeViolations": 36,
+    "contrastElements": 112,
+    "contrastGroups": [
+      {
+        "fg": "#7c5f4e",
+        "bg": "#dfcfc1",
+        "fontSize": "7.9pt (10.56px)",
+        "ratio": 3.83,
+        "required": 4.5,
+        "count": 60,
+        "classes": "text-[#7c5f4e]",
+        "sample": "Shop"
+      },
+      {
+        "fg": "#6f585d",
+        "bg": "#dfcfc1",
+        "fontSize": "10.5pt (14px)",
+        "ratio": 4.28,
+        "required": 4.5,
+        "count": 20,
+        "classes": "text-sm text-plum",
+        "sample": "10% off your first order. No noise."
+      },
+      {
+        "fg": "#6f585d",
+        "bg": "#dfcfc1",
+        "fontSize": "8.2pt (10.88px)",
+        "ratio": 4.28,
+        "required": 4.5,
+        "count": 20,
+        "classes": "text-[0.68rem] text-plum",
+        "sample": "By subscribing you agree to receive marketing emails from Lo"
+      },
+      {
+        "fg": "#8e6e5c",
+        "bg": "#f6efe9",
+        "fontSize": "7.9pt (10.56px)",
+        "ratio": 4.06,
+        "required": 4.5,
+        "count": 12,
+        "classes": "",
+        "sample": "Our story"
+      }
+    ],
+    "byRule": [
+      {
+        "id": "aria-hidden-focus",
+        "help": "ARIA hidden element must not be focusable or contain focusable elements",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+        "impact": "serious",
+        "count": 30,
+        "pages": [
+          "/",
+          "/shop",
+          "/about",
+          "/faq",
+          "/contact",
+          "/policies/shipping-returns",
+          "/policies/privacy",
+          "/policies/terms",
+          "/collections/bestsellers",
+          "/collections/lips"
+        ],
+        "samples": [
+          {
+            "html": "<div class=\"fixed inset-0 z-50 overflow-hidden pointer-events-none\" aria-hidden=\"true\">",
+            "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div id=\"mobile-menu\" class=\"fixed inset-0 z-50 flex flex-col bg-cream transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] md:hidden -translate-x-full\" aria-hidden=\"true\" role=\"dialog\" aria-modal=\"true\" aria-label=\"Menu\">",
+            "message": "Fix all of the following:\n  Focusable content should be disabled or be removed from the DOM\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          }
+        ]
+      },
+      {
+        "id": "heading-order",
+        "help": "Heading levels should only increase by one",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=axeAPI",
+        "impact": "moderate",
+        "count": 6,
+        "pages": [
+          "/shop",
+          "/collections/bestsellers",
+          "/collections/lips"
+        ],
+        "samples": [
+          {
+            "html": "<h3 class=\"h-display text-[1.2rem] md:text-[1.5rem]\"><a class=\"text-ink\" href=\"/products/lustre-lip-gloss\">Lustre Lip Gloss</a></h3>",
+            "message": "Heading order invalid"
+          }
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "id": "hidden-focus",
+        "severity": "serious",
+        "title": "Hidden controls can be tabbed to",
+        "detail": "2 tab stops land on controls inside a hidden region (for example: button \"Close bag\" inside div.fixed.inset-0 aria-hidden; a \"Shop all\" inside div.fixed.inset-0 aria-hidden), usually a closed menu, drawer or modal.",
+        "pages": [
+          "/",
+          "/shop",
+          "/about",
+          "/faq",
+          "/contact",
+          "/policies/shipping-returns",
+          "/policies/privacy",
+          "/policies/terms",
+          "/collections/bestsellers",
+          "/collections/lips"
+        ]
+      },
+      {
+        "id": "new-tab-hint",
+        "severity": "minor",
+        "title": "Links open new tabs without saying so",
+        "detail": "7 links use target=\"_blank\" with no \"(opens in new tab)\" hint (for example: Loved Beauty on Instagram, Loved Beauty on TikTok, Instagram, TikTok).",
+        "pages": [
+          "/",
+          "/shop",
+          "/about",
+          "/faq",
+          "/contact",
+          "/policies/shipping-returns",
+          "/policies/privacy",
+          "/policies/terms",
+          "/collections/bestsellers",
+          "/collections/lips"
+        ]
+      },
+      {
+        "id": "reflow",
+        "severity": "serious",
+        "title": "Page breaks at 400% zoom",
+        "detail": "At 320px wide the page scrolls sideways by 6px (li.shrink-0, a.link-underline.text-[0.7rem], li.shrink-0). Low-vision users who zoom cannot read it.",
+        "pages": [
+          "/shop"
+        ]
+      }
+    ],
+    "problems": 9
+  }
+}

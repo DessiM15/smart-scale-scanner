@@ -1,0 +1,2711 @@
+{
+  "tool": "Smart Scale Accessibility Scanner",
+  "version": "0.1.0",
+  "standard": "WCAG 2.2 Level AA",
+  "scannedAt": "2026-09-27T15:42:58.045Z",
+  "base": "https://andrethomaslaw.com",
+  "label": "Andre Thomas Law",
+  "stack": "Next.js, hosted on Vercel",
+  "pageSource": "links",
+  "durationMs": 222696,
+  "pages": [
+    {
+      "path": "/",
+      "url": "https://andrethomaslaw.com/",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Andre Thomas Law, PLLC — Houston Personal Injury Attorney",
+      "axe": {
+        "violations": [
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "help": "Heading levels should only increase by one",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=axeAPI",
+            "wcag": [],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<h3 class=\"mt-4 font-display text-[1.75rem] leading-tight text-paper md:text-[2.1rem]\">Core Values and Approach</h3>",
+                "target": "div:nth-child(1) > article > .relative > .text-\\[1\\.75rem\\].md\\:text-\\[2\\.1rem\\]",
+                "message": "Heading order invalid"
+              }
+            ]
+          }
+        ],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 62,
+          "nonBmp": 6
+        },
+        "incomplete": {
+          "color-contrast": 75
+        },
+        "passes": 49
+      },
+      "structure": {
+        "title": "Andre Thomas Law, PLLC — Houston Personal Injury Attorney",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Houston, TX PersonalInjury Lawyer.Empowering your voice,ensuringrecove"
+          },
+          {
+            "level": 3,
+            "text": "Core Values and Approach"
+          },
+          {
+            "level": 3,
+            "text": "Experience and Expertise"
+          },
+          {
+            "level": 3,
+            "text": "Client-Centered Approach"
+          },
+          {
+            "level": 3,
+            "text": "Car Accidents"
+          },
+          {
+            "level": 3,
+            "text": "Truck Accidents"
+          },
+          {
+            "level": 3,
+            "text": "Workplace Injuries"
+          },
+          {
+            "level": 3,
+            "text": "Premises Liability"
+          },
+          {
+            "level": 3,
+            "text": "Maritime & Offshore Injuries"
+          },
+          {
+            "level": 3,
+            "text": "Serious Injury & Wrongful Death"
+          },
+          {
+            "level": 2,
+            "text": "Meet Andre Thomas: Committed to Justice"
+          },
+          {
+            "level": 2,
+            "text": "The consultation is free.So is finding out where you stand."
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [
+          {
+            "from": 1,
+            "to": 3,
+            "text": "Core Values and Approach"
+          }
+        ],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 14,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 5,
+        "newTabSamples": [
+          "Read them all on Google",
+          "13201 Northwest Freeway, Suite 485, Hous",
+          "Instagram ↗",
+          "13201 Northwest FreewaySuite 485Houston,"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 2,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [
+          {
+            "index": 46,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 47,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 48,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 49,
+            "tag": "SELECT",
+            "name": "Select a practice area (optional)Personal InjuryCar Accident",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 50,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 51,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 52,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 53,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 54,
+            "tag": "SELECT",
+            "name": "Select an answerYes, I've seen a doctorI went to the ERNot y",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 55,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 56,
+            "tag": "SELECT",
+            "name": "Select a stateAlabamaAlaskaArizonaArkansasCaliforniaColorado",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 57,
+            "tag": "TEXTAREA",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          }
+        ],
+        "hiddenFocus": [
+          {
+            "index": 40,
+            "tag": "A",
+            "name": "Explore practice areas→",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div opacity:0",
+            "offscreen": false,
+            "href": "/practice-areas"
+          },
+          {
+            "index": 42,
+            "tag": "A",
+            "name": "Read them all on Google",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div opacity:0",
+            "offscreen": false,
+            "href": "https://www.google.com/maps?cid=4984099773238058092"
+          }
+        ],
+        "trap": {
+          "index": 53,
+          "tag": "INPUT",
+          "name": "",
+          "visibleFocus": false,
+          "hidden": false,
+          "offscreen": false
+        },
+        "reachedEnd": false
+      },
+      "reflow": {
+        "horizontalScroll": false,
+        "overflowPx": 0,
+        "offenders": []
+      },
+      "reducedMotion": {
+        "longAnimationsWithReduce": 0,
+        "autoplayWithReduce": 0
+      }
+    },
+    {
+      "path": "/practice-areas",
+      "url": "https://andrethomaslaw.com/practice-areas",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Practice Areas — Houston Personal Injury Attorney — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 43,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 51
+        },
+        "passes": 49
+      },
+      "structure": {
+        "title": "Practice Areas — Houston Personal Injury Attorney — Andre Thomas Law, PLLC",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Practice Areasin Houston, TX"
+          },
+          {
+            "level": 2,
+            "text": "Criminal defense — felony and misdemeanor."
+          },
+          {
+            "level": 2,
+            "text": "The consultation is free.So is finding out where you stand."
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 9,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 4,
+        "newTabSamples": [
+          "13201 Northwest Freeway, Suite 485, Hous",
+          "Instagram ↗",
+          "13201 Northwest FreewaySuite 485Houston,",
+          "SmartScale"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 1,
+          "pauseControls": 1
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 75,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [
+          {
+            "index": 31,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 32,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 33,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 34,
+            "tag": "SELECT",
+            "name": "Select a practice area (optional)Personal InjuryCar Accident",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 35,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 36,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 37,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 38,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 39,
+            "tag": "SELECT",
+            "name": "Select an answerYes, I've seen a doctorI went to the ERNot y",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 40,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 41,
+            "tag": "SELECT",
+            "name": "Select a stateAlabamaAlaskaArizonaArkansasCaliforniaColorado",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 42,
+            "tag": "TEXTAREA",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          }
+        ],
+        "hiddenFocus": [
+          {
+            "index": 20,
+            "tag": "A",
+            "name": "Railroad AccidentsAmong the most devastating vehicle-related",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div opacity:0",
+            "offscreen": false,
+            "href": "/practice-areas/railroad-accidents"
+          }
+        ],
+        "trap": {
+          "index": 38,
+          "tag": "INPUT",
+          "name": "",
+          "visibleFocus": false,
+          "hidden": false,
+          "offscreen": false
+        },
+        "reachedEnd": true
+      },
+      "reflow": {
+        "horizontalScroll": false,
+        "overflowPx": 0,
+        "offenders": []
+      }
+    },
+    {
+      "path": "/about",
+      "url": "https://andrethomaslaw.com/about",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "About Andre Thomas — Houston Attorney, Licensed in TX & TN — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 46,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 54
+        },
+        "passes": 49
+      },
+      "structure": {
+        "title": "About Andre Thomas — Houston Attorney, Licensed in TX & TN — Andre Thomas Law, PLLC",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Meet Andre Thomas,Houston PersonalInjury Attorney"
+          },
+          {
+            "level": 2,
+            "text": "Both sides of the courtroom."
+          },
+          {
+            "level": 3,
+            "text": "Assistant District Attorney"
+          },
+          {
+            "level": 3,
+            "text": "Attorney"
+          },
+          {
+            "level": 3,
+            "text": "Founding Attorney"
+          },
+          {
+            "level": 2,
+            "text": "High-profile matters, argued in open court."
+          },
+          {
+            "level": 3,
+            "text": "He prosecuted before he protected"
+          },
+          {
+            "level": 3,
+            "text": "Licensed in two states"
+          },
+          {
+            "level": 3,
+            "text": "Tried in front of juries"
+          },
+          {
+            "level": 3,
+            "text": "You talk to the attorney"
+          },
+          {
+            "level": 2,
+            "text": "The consultation is free.So is finding out where you stand."
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 6,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 4,
+        "newTabSamples": [
+          "13201 Northwest Freeway, Suite 485, Hous",
+          "Instagram ↗",
+          "13201 Northwest FreewaySuite 485Houston,",
+          "SmartScale"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 1,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [
+          {
+            "index": 15,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 16,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 17,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 18,
+            "tag": "SELECT",
+            "name": "Select a practice area (optional)Personal InjuryCar Accident",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 19,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 20,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 21,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 22,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 23,
+            "tag": "SELECT",
+            "name": "Select an answerYes, I've seen a doctorI went to the ERNot y",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 24,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 25,
+            "tag": "SELECT",
+            "name": "Select a stateAlabamaAlaskaArizonaArkansasCaliforniaColorado",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 26,
+            "tag": "TEXTAREA",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          }
+        ],
+        "hiddenFocus": [],
+        "trap": {
+          "index": 22,
+          "tag": "INPUT",
+          "name": "",
+          "visibleFocus": false,
+          "hidden": false,
+          "offscreen": false
+        },
+        "reachedEnd": false
+      },
+      "reflow": {
+        "horizontalScroll": false,
+        "overflowPx": 0,
+        "offenders": []
+      }
+    },
+    {
+      "path": "/team",
+      "url": "https://andrethomaslaw.com/team",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Our Staff | Andre Thomas Law, PLLC | Houston Personal Injury — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 45,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 53
+        },
+        "passes": 49
+      },
+      "structure": {
+        "title": "Our Staff | Andre Thomas Law, PLLC | Houston Personal Injury — Andre Thomas Law, PLLC",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Our Attorneys and Staff— Andre Thomas Law, Houston"
+          },
+          {
+            "level": 2,
+            "text": "Who argues your case"
+          },
+          {
+            "level": 3,
+            "text": "Andre Thomas"
+          },
+          {
+            "level": 2,
+            "text": "Who builds it"
+          },
+          {
+            "level": 3,
+            "text": "Maria Hernandez-Castillo"
+          },
+          {
+            "level": 3,
+            "text": "Guillermo Hernandez"
+          },
+          {
+            "level": 3,
+            "text": "Marie Hernandez"
+          },
+          {
+            "level": 3,
+            "text": "Nayla Mendez"
+          },
+          {
+            "level": 3,
+            "text": "Milagro Rodriguez Mejia"
+          },
+          {
+            "level": 3,
+            "text": "Marissa Lopez"
+          },
+          {
+            "level": 3,
+            "text": "Itzel Tapia"
+          },
+          {
+            "level": 2,
+            "text": "Not one of them is optional."
+          },
+          {
+            "level": 2,
+            "text": "The consultation is free.So is finding out where you stand."
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 12,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 4,
+        "newTabSamples": [
+          "13201 Northwest Freeway, Suite 485, Hous",
+          "Instagram ↗",
+          "13201 Northwest FreewaySuite 485Houston,",
+          "SmartScale"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 1,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 66,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [
+          {
+            "index": 22,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 23,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 24,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 25,
+            "tag": "SELECT",
+            "name": "Select a practice area (optional)Personal InjuryCar Accident",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 26,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 27,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 28,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 29,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 30,
+            "tag": "SELECT",
+            "name": "Select an answerYes, I've seen a doctorI went to the ERNot y",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 31,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 32,
+            "tag": "SELECT",
+            "name": "Select a stateAlabamaAlaskaArizonaArkansasCaliforniaColorado",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 33,
+            "tag": "TEXTAREA",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          }
+        ],
+        "hiddenFocus": [],
+        "trap": {
+          "index": 29,
+          "tag": "INPUT",
+          "name": "",
+          "visibleFocus": false,
+          "hidden": false,
+          "offscreen": false
+        },
+        "reachedEnd": true
+      }
+    },
+    {
+      "path": "/reviews",
+      "url": "https://andrethomaslaw.com/reviews",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Client Reviews — 4.9 Stars Across 60 Google Reviews — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 45,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 53
+        },
+        "passes": 49
+      },
+      "structure": {
+        "title": "Client Reviews — 4.9 Stars Across 60 Google Reviews — Andre Thomas Law, PLLC",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Client Reviews — Andre Thomas Law, Houston"
+          },
+          {
+            "level": 2,
+            "text": "Diligence, determination, and empathy."
+          },
+          {
+            "level": 3,
+            "text": "He prosecuted before he protected"
+          },
+          {
+            "level": 3,
+            "text": "Licensed in two states"
+          },
+          {
+            "level": 3,
+            "text": "Tried in front of juries"
+          },
+          {
+            "level": 3,
+            "text": "You talk to the attorney"
+          },
+          {
+            "level": 2,
+            "text": "The consultation is free.So is finding out where you stand."
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 3,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 6,
+        "newTabSamples": [
+          "Read them all on Google",
+          "Read every review on Google",
+          "13201 Northwest Freeway, Suite 485, Hous",
+          "Instagram ↗"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 1,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [
+          {
+            "index": 16,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 17,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 18,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 19,
+            "tag": "SELECT",
+            "name": "Select a practice area (optional)Personal InjuryCar Accident",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 20,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 21,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 22,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 23,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 24,
+            "tag": "SELECT",
+            "name": "Select an answerYes, I've seen a doctorI went to the ERNot y",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 25,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 26,
+            "tag": "SELECT",
+            "name": "Select a stateAlabamaAlaskaArizonaArkansasCaliforniaColorado",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 27,
+            "tag": "TEXTAREA",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          }
+        ],
+        "hiddenFocus": [
+          {
+            "index": 12,
+            "tag": "A",
+            "name": "Read every review on Google",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div opacity:0",
+            "offscreen": false,
+            "href": "https://www.google.com/maps?cid=4984099773238058092"
+          }
+        ],
+        "trap": {
+          "index": 23,
+          "tag": "INPUT",
+          "name": "",
+          "visibleFocus": false,
+          "hidden": false,
+          "offscreen": false
+        },
+        "reachedEnd": false
+      }
+    },
+    {
+      "path": "/contact",
+      "url": "https://andrethomaslaw.com/contact",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Contact — Free Consultation with Andre Thomas Law — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 45,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 53,
+          "frame-tested": 1
+        },
+        "passes": 51
+      },
+      "structure": {
+        "title": "Contact — Free Consultation with Andre Thomas Law — Andre Thomas Law, PLLC",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Tell uswhat happened."
+          },
+          {
+            "level": 2,
+            "text": "No one should have to guess what comes next."
+          },
+          {
+            "level": 3,
+            "text": "The consultation"
+          },
+          {
+            "level": 3,
+            "text": "The investigation"
+          },
+          {
+            "level": 3,
+            "text": "The demand"
+          },
+          {
+            "level": 3,
+            "text": "Trial, if that is what it takes"
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 4,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 4,
+        "newTabSamples": [
+          "13201 Northwest FreewaySuite 485Houston,",
+          "Instagram ↗",
+          "13201 Northwest FreewaySuite 485Houston,",
+          "SmartScale"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 1,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 58,
+        "embeddedFrames": [
+          "Map to Andre Thomas Law, PLLC"
+        ],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [
+          {
+            "index": 11,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 12,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 13,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 14,
+            "tag": "SELECT",
+            "name": "Select a practice area (optional)Personal InjuryCar Accident",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 15,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 16,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 17,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 18,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 19,
+            "tag": "SELECT",
+            "name": "Select an answerYes, I've seen a doctorI went to the ERNot y",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 20,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 21,
+            "tag": "SELECT",
+            "name": "Select a stateAlabamaAlaskaArizonaArkansasCaliforniaColorado",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 22,
+            "tag": "TEXTAREA",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          }
+        ],
+        "hiddenFocus": [],
+        "trap": {
+          "index": 18,
+          "tag": "INPUT",
+          "name": "",
+          "visibleFocus": false,
+          "hidden": false,
+          "offscreen": false
+        },
+        "reachedEnd": true
+      }
+    },
+    {
+      "path": "/es",
+      "url": "https://andrethomaslaw.com/es",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Andre Thomas Law, PLLC — Abogado de Lesiones Personales en Houston — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "help": "Heading levels should only increase by one",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=axeAPI",
+            "wcag": [],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<h3 class=\"mt-4 font-display text-[1.75rem] leading-tight text-paper md:text-[2.1rem]\">Valores y forma de trabajar</h3>",
+                "target": "div:nth-child(1) > article > .relative > .text-\\[1\\.75rem\\].md\\:text-\\[2\\.1rem\\]",
+                "message": "Heading order invalid"
+              }
+            ]
+          }
+        ],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 8,
+          "pseudoContent": 61,
+          "nonBmp": 5
+        },
+        "incomplete": {
+          "color-contrast": 74
+        },
+        "passes": 49
+      },
+      "structure": {
+        "title": "Andre Thomas Law, PLLC — Abogado de Lesiones Personales en Houston — Andre Thomas Law, PLLC",
+        "lang": "es",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Abogado de LesionesPersonales en Houston.Damos fuerza a su voz,garanti"
+          },
+          {
+            "level": 3,
+            "text": "Valores y forma de trabajar"
+          },
+          {
+            "level": 3,
+            "text": "Experiencia y conocimiento"
+          },
+          {
+            "level": 3,
+            "text": "El cliente, en el centro"
+          },
+          {
+            "level": 3,
+            "text": "Accidentes de Auto"
+          },
+          {
+            "level": 3,
+            "text": "Accidentes de Camión"
+          },
+          {
+            "level": 3,
+            "text": "Lesiones Laborales"
+          },
+          {
+            "level": 3,
+            "text": "Responsabilidad del Propietario"
+          },
+          {
+            "level": 3,
+            "text": "Lesiones Marítimas y Costa Afuera"
+          },
+          {
+            "level": 3,
+            "text": "Lesiones Graves y Muerte por Negligencia"
+          },
+          {
+            "level": 2,
+            "text": "Conozca a Andre Thomas: comprometido con la justicia"
+          },
+          {
+            "level": 2,
+            "text": "La consulta es gratis.Saber en qué posición está, también."
+          },
+          {
+            "level": 2,
+            "text": "Navegar"
+          },
+          {
+            "level": 2,
+            "text": "Áreas de Práctica"
+          },
+          {
+            "level": 2,
+            "text": "Oficina"
+          }
+        ],
+        "headingSkips": [
+          {
+            "from": 1,
+            "to": 3,
+            "text": "Valores y forma de trabajar"
+          }
+        ],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 14,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 5,
+        "newTabSamples": [
+          "Léalas todas en Google",
+          "13201 Northwest Freeway, Suite 485, Hous",
+          "Instagram ↗",
+          "13201 Northwest FreewaySuite 485Houston,"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 2,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": false
+        },
+        "invisibleFocus": [
+          {
+            "index": 46,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 47,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 48,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 49,
+            "tag": "SELECT",
+            "name": "Seleccione un área de práctica (opcional)Lesiones Personales",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 50,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 51,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 52,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 53,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 54,
+            "tag": "SELECT",
+            "name": "Seleccione una respuestaSí, he visto a un médicoFui a la sal",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 55,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 56,
+            "tag": "SELECT",
+            "name": "Seleccione un estadoAlabamaAlaskaArizonaArkansasCaliforniaCo",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 57,
+            "tag": "TEXTAREA",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          }
+        ],
+        "hiddenFocus": [
+          {
+            "index": 40,
+            "tag": "A",
+            "name": "Explorar áreas de práctica→",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div opacity:0",
+            "offscreen": false,
+            "href": "/es/areas-de-practica"
+          },
+          {
+            "index": 42,
+            "tag": "A",
+            "name": "Léalas todas en Google",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "div opacity:0",
+            "offscreen": false,
+            "href": "https://www.google.com/maps?cid=4984099773238058092"
+          }
+        ],
+        "trap": {
+          "index": 53,
+          "tag": "INPUT",
+          "name": "",
+          "visibleFocus": false,
+          "hidden": false,
+          "offscreen": false
+        },
+        "reachedEnd": false
+      }
+    },
+    {
+      "path": "/practice-areas/car-accidents",
+      "url": "https://andrethomaslaw.com/practice-areas/car-accidents",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Car Accidents Attorney in Houston, Texas — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 51,
+          "nonBmp": 2
+        },
+        "incomplete": {
+          "color-contrast": 60
+        },
+        "passes": 49
+      },
+      "structure": {
+        "title": "Car Accidents Attorney in Houston, Texas — Andre Thomas Law, PLLC",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Car Accidents"
+          },
+          {
+            "level": 2,
+            "text": "The consultation is free.So is finding out where you stand."
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 3,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 4,
+        "newTabSamples": [
+          "13201 Northwest Freeway, Suite 485, Hous",
+          "Instagram ↗",
+          "13201 Northwest FreewaySuite 485Houston,",
+          "SmartScale"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 1,
+          "pauseControls": 1
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [
+          {
+            "index": 29,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 30,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 31,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 32,
+            "tag": "SELECT",
+            "name": "Select a practice area (optional)Personal InjuryCar Accident",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 33,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 34,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 35,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 36,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 37,
+            "tag": "SELECT",
+            "name": "Select an answerYes, I've seen a doctorI went to the ERNot y",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 38,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 39,
+            "tag": "SELECT",
+            "name": "Select a stateAlabamaAlaskaArizonaArkansasCaliforniaColorado",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 40,
+            "tag": "TEXTAREA",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          }
+        ],
+        "hiddenFocus": [],
+        "trap": {
+          "index": 36,
+          "tag": "INPUT",
+          "name": "",
+          "visibleFocus": false,
+          "hidden": false,
+          "offscreen": false
+        },
+        "reachedEnd": false
+      }
+    },
+    {
+      "path": "/practice-areas/truck-accidents",
+      "url": "https://andrethomaslaw.com/practice-areas/truck-accidents",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Truck Accidents Attorney in Houston, Texas — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 51,
+          "nonBmp": 2
+        },
+        "incomplete": {
+          "color-contrast": 60
+        },
+        "passes": 49
+      },
+      "structure": {
+        "title": "Truck Accidents Attorney in Houston, Texas — Andre Thomas Law, PLLC",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Truck Accidents"
+          },
+          {
+            "level": 2,
+            "text": "The consultation is free.So is finding out where you stand."
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 3,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 4,
+        "newTabSamples": [
+          "13201 Northwest Freeway, Suite 485, Hous",
+          "Instagram ↗",
+          "13201 Northwest FreewaySuite 485Houston,",
+          "SmartScale"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 1,
+          "pauseControls": 1
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 73,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [
+          {
+            "index": 29,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 30,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 31,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 32,
+            "tag": "SELECT",
+            "name": "Select a practice area (optional)Personal InjuryCar Accident",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 33,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 34,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 35,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 36,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 37,
+            "tag": "SELECT",
+            "name": "Select an answerYes, I've seen a doctorI went to the ERNot y",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 38,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 39,
+            "tag": "SELECT",
+            "name": "Select a stateAlabamaAlaskaArizonaArkansasCaliforniaColorado",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 40,
+            "tag": "TEXTAREA",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          }
+        ],
+        "hiddenFocus": [],
+        "trap": {
+          "index": 36,
+          "tag": "INPUT",
+          "name": "",
+          "visibleFocus": false,
+          "hidden": false,
+          "offscreen": false
+        },
+        "reachedEnd": true
+      }
+    },
+    {
+      "path": "/practice-areas/workplace-injuries",
+      "url": "https://andrethomaslaw.com/practice-areas/workplace-injuries",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Workplace Injuries Attorney in Houston, Texas — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 51,
+          "nonBmp": 2
+        },
+        "incomplete": {
+          "color-contrast": 60
+        },
+        "passes": 49
+      },
+      "structure": {
+        "title": "Workplace Injuries Attorney in Houston, Texas — Andre Thomas Law, PLLC",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Workplace Injuries"
+          },
+          {
+            "level": 2,
+            "text": "The consultation is free.So is finding out where you stand."
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 3,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 4,
+        "newTabSamples": [
+          "13201 Northwest Freeway, Suite 485, Hous",
+          "Instagram ↗",
+          "13201 Northwest FreewaySuite 485Houston,",
+          "SmartScale"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 1,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [
+          {
+            "index": 29,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 30,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 31,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 32,
+            "tag": "SELECT",
+            "name": "Select a practice area (optional)Personal InjuryCar Accident",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 33,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 34,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 35,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 36,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 37,
+            "tag": "SELECT",
+            "name": "Select an answerYes, I've seen a doctorI went to the ERNot y",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 38,
+            "tag": "INPUT",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 39,
+            "tag": "SELECT",
+            "name": "Select a stateAlabamaAlaskaArizonaArkansasCaliforniaColorado",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          },
+          {
+            "index": 40,
+            "tag": "TEXTAREA",
+            "name": "",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false
+          }
+        ],
+        "hiddenFocus": [],
+        "trap": {
+          "index": 36,
+          "tag": "INPUT",
+          "name": "",
+          "visibleFocus": false,
+          "hidden": false,
+          "offscreen": false
+        },
+        "reachedEnd": false
+      }
+    },
+    {
+      "path": "/",
+      "url": "https://andrethomaslaw.com/",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Andre Thomas Law, PLLC — Houston Personal Injury Attorney",
+      "axe": {
+        "violations": [
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "help": "Heading levels should only increase by one",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=axeAPI",
+            "wcag": [],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<h3 class=\"mt-4 font-display text-[1.75rem] leading-tight text-paper md:text-[2.1rem]\">Core Values and Approach</h3>",
+                "target": "div:nth-child(1) > article > .relative > .text-\\[1\\.75rem\\].md\\:text-\\[2\\.1rem\\]",
+                "message": "Heading order invalid"
+              }
+            ]
+          }
+        ],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 57,
+          "nonBmp": 3
+        },
+        "incomplete": {
+          "color-contrast": 61
+        },
+        "passes": 49
+      }
+    },
+    {
+      "path": "/practice-areas",
+      "url": "https://andrethomaslaw.com/practice-areas",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Practice Areas — Houston Personal Injury Attorney — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 43,
+          "bgOverlap": 3,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 48
+        },
+        "passes": 49
+      }
+    },
+    {
+      "path": "/about",
+      "url": "https://andrethomaslaw.com/about",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "About Andre Thomas — Houston Attorney, Licensed in TX & TN — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 46,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 48
+        },
+        "passes": 49
+      }
+    },
+    {
+      "path": "/team",
+      "url": "https://andrethomaslaw.com/team",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Our Staff | Andre Thomas Law, PLLC | Houston Personal Injury — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [
+          {
+            "fg": "#a4823a",
+            "bg": "#fbf9f5",
+            "fontSize": "8.3pt (11px)",
+            "ratio": 3.42,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-gold-600",
+            "sample": "02"
+          }
+        ],
+        "contrastElements": 1,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 45,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 47
+        },
+        "passes": 49
+      }
+    },
+    {
+      "path": "/reviews",
+      "url": "https://andrethomaslaw.com/reviews",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Client Reviews — 4.9 Stars Across 60 Google Reviews — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [
+          {
+            "fg": "#a4823a",
+            "bg": "#f4efe5",
+            "fontSize": "8.3pt (11px)",
+            "ratio": 3.14,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-gold-600",
+            "sample": "02"
+          }
+        ],
+        "contrastElements": 1,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 45,
+          "nonBmp": 2
+        },
+        "incomplete": {
+          "color-contrast": 48
+        },
+        "passes": 49
+      }
+    },
+    {
+      "path": "/contact",
+      "url": "https://andrethomaslaw.com/contact",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Contact — Free Consultation with Andre Thomas Law — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [
+          {
+            "fg": "#a4823a",
+            "bg": "#fbf9f5",
+            "fontSize": "8.3pt (11px)",
+            "ratio": 3.42,
+            "required": 4.5,
+            "count": 1,
+            "classes": "text-gold-600",
+            "sample": "02"
+          }
+        ],
+        "contrastElements": 1,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 45,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 47,
+          "frame-tested": 1
+        },
+        "passes": 51
+      }
+    },
+    {
+      "path": "/es",
+      "url": "https://andrethomaslaw.com/es",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Andre Thomas Law, PLLC — Abogado de Lesiones Personales en Houston — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [
+          {
+            "id": "heading-order",
+            "impact": "moderate",
+            "help": "Heading levels should only increase by one",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=axeAPI",
+            "wcag": [],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<h3 class=\"mt-4 font-display text-[1.75rem] leading-tight text-paper md:text-[2.1rem]\">Valores y forma de trabajar</h3>",
+                "target": "div:nth-child(1) > article > .relative > .text-\\[1\\.75rem\\].md\\:text-\\[2\\.1rem\\]",
+                "message": "Heading order invalid"
+              }
+            ]
+          }
+        ],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 3,
+          "pseudoContent": 57,
+          "nonBmp": 3
+        },
+        "incomplete": {
+          "color-contrast": 63
+        },
+        "passes": 49
+      }
+    },
+    {
+      "path": "/practice-areas/car-accidents",
+      "url": "https://andrethomaslaw.com/practice-areas/car-accidents",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Car Accidents Attorney in Houston, Texas — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 45,
+          "nonBmp": 2
+        },
+        "incomplete": {
+          "color-contrast": 48
+        },
+        "passes": 49
+      }
+    },
+    {
+      "path": "/practice-areas/truck-accidents",
+      "url": "https://andrethomaslaw.com/practice-areas/truck-accidents",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Truck Accidents Attorney in Houston, Texas — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 45,
+          "nonBmp": 2
+        },
+        "incomplete": {
+          "color-contrast": 48
+        },
+        "passes": 49
+      }
+    },
+    {
+      "path": "/practice-areas/workplace-injuries",
+      "url": "https://andrethomaslaw.com/practice-areas/workplace-injuries",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Workplace Injuries Attorney in Houston, Texas — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 45,
+          "nonBmp": 2
+        },
+        "incomplete": {
+          "color-contrast": 48
+        },
+        "passes": 49
+      }
+    }
+  ],
+  "summary": {
+    "pages": 10,
+    "pagesWithErrors": 0,
+    "axeViolations": 4,
+    "contrastElements": 3,
+    "contrastGroups": [
+      {
+        "fg": "#a4823a",
+        "bg": "#fbf9f5",
+        "fontSize": "8.3pt (11px)",
+        "ratio": 3.42,
+        "required": 4.5,
+        "count": 2,
+        "classes": "text-gold-600",
+        "sample": "02"
+      },
+      {
+        "fg": "#a4823a",
+        "bg": "#f4efe5",
+        "fontSize": "8.3pt (11px)",
+        "ratio": 3.14,
+        "required": 4.5,
+        "count": 1,
+        "classes": "text-gold-600",
+        "sample": "02"
+      }
+    ],
+    "byRule": [
+      {
+        "id": "heading-order",
+        "help": "Heading levels should only increase by one",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=axeAPI",
+        "impact": "moderate",
+        "count": 4,
+        "pages": [
+          "/",
+          "/es"
+        ],
+        "samples": [
+          {
+            "html": "<h3 class=\"mt-4 font-display text-[1.75rem] leading-tight text-paper md:text-[2.1rem]\">Core Values and Approach</h3>",
+            "message": "Heading order invalid"
+          },
+          {
+            "html": "<h3 class=\"mt-4 font-display text-[1.75rem] leading-tight text-paper md:text-[2.1rem]\">Valores y forma de trabajar</h3>",
+            "message": "Heading order invalid"
+          }
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "id": "invisible-focus",
+        "severity": "serious",
+        "title": "Keyboard focus is invisible",
+        "detail": "12 of the first 80 tab stops show no focus indicator (for example: input \"unnamed\", input \"unnamed\", input \"unnamed\", select \"Select a practice area (optional)Personal InjuryCar Accident\"). A keyboard user cannot see where they are.",
+        "pages": [
+          "/",
+          "/practice-areas",
+          "/about",
+          "/team",
+          "/reviews",
+          "/contact",
+          "/es",
+          "/practice-areas/car-accidents",
+          "/practice-areas/truck-accidents",
+          "/practice-areas/workplace-injuries"
+        ]
+      },
+      {
+        "id": "hidden-focus",
+        "severity": "serious",
+        "title": "Hidden controls can be tabbed to",
+        "detail": "2 tab stops land on controls inside a hidden region (for example: a \"Explore practice areas→\" inside div opacity:0; a \"Read them all on Google\" inside div opacity:0), usually a closed menu, drawer or modal.",
+        "pages": [
+          "/",
+          "/practice-areas",
+          "/reviews",
+          "/es"
+        ]
+      },
+      {
+        "id": "focus-trap",
+        "severity": "critical",
+        "title": "Keyboard focus gets trapped",
+        "detail": "Tab keeps landing on input \"unnamed\" and cannot move past it.",
+        "pages": [
+          "/",
+          "/practice-areas",
+          "/about",
+          "/team",
+          "/reviews",
+          "/contact",
+          "/es",
+          "/practice-areas/car-accidents",
+          "/practice-areas/truck-accidents",
+          "/practice-areas/workplace-injuries"
+        ]
+      },
+      {
+        "id": "new-tab-hint",
+        "severity": "minor",
+        "title": "Links open new tabs without saying so",
+        "detail": "5 links use target=\"_blank\" with no \"(opens in new tab)\" hint (for example: Read them all on Google, 13201 Northwest Freeway, Suite 485, Hous, Instagram ↗, 13201 Northwest FreewaySuite 485Houston,).",
+        "pages": [
+          "/",
+          "/practice-areas",
+          "/about",
+          "/team",
+          "/reviews",
+          "/contact",
+          "/es",
+          "/practice-areas/car-accidents",
+          "/practice-areas/truck-accidents",
+          "/practice-areas/workplace-injuries"
+        ]
+      },
+      {
+        "id": "long-animation",
+        "severity": "moderate",
+        "title": "Content moves for more than five seconds with no pause control",
+        "detail": "2 animation(s) run longer than five seconds (a ticker, marquee or carousel) and the page has no visible pause, stop or play control. Pausing on hover or focus helps but is not a control a visitor can find; WCAG 2.2.2 asks for one.",
+        "pages": [
+          "/",
+          "/about",
+          "/team",
+          "/reviews",
+          "/contact",
+          "/es",
+          "/practice-areas/workplace-injuries"
+        ]
+      },
+      {
+        "id": "no-skip-link",
+        "severity": "moderate",
+        "title": "No skip link",
+        "detail": "The first Tab press should offer a link past the navigation to the main content. A keyboard user must otherwise tab through every menu item on every page.",
+        "pages": [
+          "/es"
+        ]
+      }
+    ],
+    "problems": 9
+  }
+}

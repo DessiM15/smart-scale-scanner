@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loved Beauty · Accessibility Report</title>
+<style>
+  :root { --bg:#0C0B0A; --panel:#131211; --panel2:#1A1816; --line:rgba(255,255,255,.10); --text:#F5F2EE; --muted:rgba(255,255,255,.66); --red:#EF4444; --gold:#D9B26A; --ok:#5FBF85; --warn:#E0A83A; }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.55 Inter, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .wrap { max-width:1040px; margin:0 auto; padding:48px 20px 80px }
+  .eyebrow { font:11px/1 ui-monospace, Menlo, monospace; letter-spacing:.18em; text-transform:uppercase; color:var(--red) }
+  h1 { font-size:clamp(34px,5vw,56px); line-height:1.05; margin:12px 0 8px; letter-spacing:-.01em }
+  .lede { color:var(--muted); max-width:66ch; margin:0 }
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:32px 0 }
+  .tile { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px 18px }
+  .tile b { display:block; font-size:34px; line-height:1; letter-spacing:-.02em; font-variant-numeric:tabular-nums }
+  .tile span { display:block; margin-top:8px; font:11px/1.3 ui-monospace, Menlo, monospace; letter-spacing:.14em; text-transform:uppercase; color:var(--muted) }
+  .tile.bad b { color:var(--red) } .tile.ok b { color:var(--ok) }
+  .verdict { border-left:3px solid var(--red); background:var(--panel2); padding:14px 18px; border-radius:0 10px 10px 0; max-width:70ch }
+  h2 { font-size:22px; margin:44px 0 12px }
+  .item { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:18px 20px; margin-bottom:12px }
+  .item header { display:flex; flex-wrap:wrap; gap:8px 14px; align-items:baseline }
+  .item h3 { margin:0; font-size:17px }
+  .sev { font:10px/1 ui-monospace, Menlo, monospace; letter-spacing:.14em; text-transform:uppercase; padding:5px 8px; border-radius:999px; border:1px solid var(--line) }
+  .sev.critical, .sev.serious { color:var(--red); border-color:rgba(239,68,68,.4) } .sev.moderate { color:var(--warn); border-color:rgba(224,168,58,.4) } .sev.minor { color:var(--muted) }
+  .count { color:var(--muted); font-size:13px }
+  .item p { color:var(--muted); margin:10px 0 0; max-width:72ch }
+  .item ul { margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13.5px }
+  .item code, td code, .samples li { font:12.5px/1.5 ui-monospace, Menlo, monospace }
+  .pages { margin-top:10px; font-size:12.5px; color:var(--muted) }
+  table { width:100%; border-collapse:collapse; font-size:14px; margin-top:8px }
+  th, td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top }
+  th { font:11px/1 ui-monospace, Menlo, monospace; letter-spacing:.12em; text-transform:uppercase; color:var(--muted) }
+  td.num { font-variant-numeric:tabular-nums; text-align:right } th:nth-child(n+4) { text-align:right }
+  .bad { color:var(--red) } .err { color:var(--warn) }
+  .tablewrap { overflow-x:auto }
+  .next { background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--red); border-radius:10px; padding:22px 24px; max-width:76ch }
+  .next p { margin:0 0 10px; color:var(--muted) } .next p:last-child { margin:0 }
+  footer { margin-top:48px; padding-top:18px; border-top:1px solid var(--line); font:11px/1.6 ui-monospace, Menlo, monospace; letter-spacing:.1em; text-transform:uppercase; color:var(--muted) }
+  @media (max-width:640px) { .wrap { padding:32px 16px 64px } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Smart Scale Accessibility Scanner · WCAG 2.2 Level AA</p>
+  <h1>Loved Beauty</h1>
+  <p class="lede">https://loved-beauty.vercel.app · scanned September 27, 2026 · 10 pages at desktop and phone widths · Next.js, hosted on Vercel</p>
+
+  <div class="tiles">
+    <div class="tile bad"><b>9</b><span>distinct problems</span></div>
+    <div class="tile"><b>4</b><span>critical or serious</span></div>
+    <div class="tile"><b>112</b><span>faint-text elements</span></div>
+    <div class="tile"><b>10</b><span>pages checked</span></div>
+  </div>
+
+  <div class="verdict"><b>9 distinct problems to fix.</b> Every one of them is a specific change in the site's code, listed below in plain words and in the accompanying fix file with exact instructions. Nothing here needs a rebuild.</div>
+
+  <h2>What fails, and what it means</h2>
+  
+  <div class="item">
+    <header><span class="sev serious">serious</span><h3>Hidden controls can be tabbed to</h3></header>
+    <p>2 tab stops land on controls inside a hidden region (for example: button &quot;Close bag&quot; inside div.fixed.inset-0 aria-hidden; a &quot;Shop all&quot; inside div.fixed.inset-0 aria-hidden), usually a closed menu, drawer or modal.</p>
+    
+    <div class="pages">On: <code>/</code> <code>/shop</code> <code>/about</code> <code>/faq</code> <code>/contact</code> <code>/policies/shipping-returns</code> <code>/policies/privacy</code> <code>/policies/terms</code> <code>/collections/bestsellers</code> <code>/collections/lips</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev serious">serious</span><h3>Page breaks at 400% zoom</h3></header>
+    <p>At 320px wide the page scrolls sideways by 6px (li.shrink-0, a.link-underline.text-[0.7rem], li.shrink-0). Low-vision users who zoom cannot read it.</p>
+    
+    <div class="pages">On: <code>/shop</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev serious">serious</span><h3>Text too faint to read</h3><span class="count">112 elements, 4 color pairs</span></header>
+    <p>Text that is too faint against its background for people with low vision to read. This is the single most common failure on small-business sites and the first thing a demand letter lists.</p>
+    <ul class="samples"><li>#7c5f4e on #dfcfc1 at 7.9pt (10.56px): 3.83:1, needs 4.5:1 (60) · &quot;Shop&quot;</li><li>#6f585d on #dfcfc1 at 10.5pt (14px): 4.28:1, needs 4.5:1 (20) · &quot;10% off your first order. No noise.&quot;</li><li>#6f585d on #dfcfc1 at 8.2pt (10.88px): 4.28:1, needs 4.5:1 (20) · &quot;By subscribing you agree to receive marketing emails from Lo&quot;</li><li>#8e6e5c on #f6efe9 at 7.9pt (10.56px): 4.06:1, needs 4.5:1 (12) · &quot;Our story&quot;</li></ul>
+    <div class="pages">On: <code>/</code> <code>/shop</code> <code>/about</code> <code>/faq</code> <code>/contact</code> <code>/policies/shipping-returns</code> <code>/policies/privacy</code> <code>/policies/terms</code> <code>/collections/bestsellers</code> <code>/collections/lips</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev serious">serious</span><h3>ARIA hidden element must not be focusable or contain focusable elements</h3><span class="count">30 instances</span></header>
+    <p>Controls that are hidden from screen readers but can still be tabbed to. A keyboard user lands inside something invisible, usually a closed menu or cart drawer.</p>
+    <ul class="samples"><li>&lt;div class=&quot;fixed inset-0 z-50 overflow-hidden pointer-events-none&quot; aria-hidden=&quot;true&quot;&gt;</li><li>&lt;div id=&quot;mobile-menu&quot; class=&quot;fixed inset-0 z-50 flex flex-col bg-cream transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] md:hidden -translate-x-full&quot; aria-hidden=&quot;true&quot; role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-label=&quot;Menu&quot;&gt;</li></ul>
+    <div class="pages">On: <code>/</code> <code>/shop</code> <code>/about</code> <code>/faq</code> <code>/contact</code> <code>/policies/shipping-returns</code> <code>/policies/privacy</code> <code>/policies/terms</code> <code>/collections/bestsellers</code> <code>/collections/lips</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev moderate">moderate</span><h3>Heading levels should only increase by one</h3><span class="count">6 instances</span></header>
+    <p>Heading levels that skip (a level 1 straight to a level 3). Screen reader users skim a page by its headings the way sighted people skim by eye; a skipped level breaks the outline.</p>
+    <ul class="samples"><li>&lt;h3 class=&quot;h-display text-[1.2rem] md:text-[1.5rem]&quot;&gt;&lt;a class=&quot;text-ink&quot; href=&quot;/products/lustre-lip-gloss&quot;&gt;Lustre Lip Gloss&lt;/a&gt;&lt;/h3&gt;</li></ul>
+    <div class="pages">On: <code>/shop</code> <code>/collections/bestsellers</code> <code>/collections/lips</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev minor">minor</span><h3>Links open new tabs without saying so</h3></header>
+    <p>7 links use target=&quot;_blank&quot; with no &quot;(opens in new tab)&quot; hint (for example: Loved Beauty on Instagram, Loved Beauty on TikTok, Instagram, TikTok).</p>
+    
+    <div class="pages">On: <code>/</code> <code>/shop</code> <code>/about</code> <code>/faq</code> <code>/contact</code> <code>/policies/shipping-returns</code> <code>/policies/privacy</code> <code>/policies/terms</code> <code>/collections/bestsellers</code> <code>/collections/lips</code></div>
+  </div>
+
+  <h2>Page by page</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Page</th><th>View</th><th>Status</th><th>Faint text</th><th>Other failures</th><th>Keyboard</th><th>400% zoom</th></tr></thead>
+    <tbody><tr><td><code>/</code></td><td>desktop</td><td>200</td><td class="num">5</td><td class="num">1</td><td class="num">2</td><td>ok</td></tr><tr><td><code>/shop</code></td><td>desktop</td><td>200</td><td class="num">5</td><td class="num">2</td><td class="num">2</td><td><span class="bad">sideways scroll</span></td></tr><tr><td><code>/about</code></td><td>desktop</td><td>200</td><td class="num">6</td><td class="num">1</td><td class="num">3</td><td>ok</td></tr><tr><td><code>/faq</code></td><td>desktop</td><td>200</td><td class="num">6</td><td class="num">1</td><td class="num">4</td><td>·</td></tr><tr><td><code>/contact</code></td><td>desktop</td><td>200</td><td class="num">6</td><td class="num">1</td><td class="num">2</td><td>·</td></tr><tr><td><code>/policies/shipping-returns</code></td><td>desktop</td><td>200</td><td class="num">6</td><td class="num">1</td><td class="num">4</td><td>·</td></tr><tr><td><code>/policies/privacy</code></td><td>desktop</td><td>200</td><td class="num">6</td><td class="num">1</td><td class="num">4</td><td>·</td></tr><tr><td><code>/policies/terms</code></td><td>desktop</td><td>200</td><td class="num">6</td><td class="num">1</td><td class="num">4</td><td>·</td></tr><tr><td><code>/collections/bestsellers</code></td><td>desktop</td><td>200</td><td class="num">5</td><td class="num">2</td><td class="num">2</td><td>·</td></tr><tr><td><code>/collections/lips</code></td><td>desktop</td><td>200</td><td class="num">5</td><td class="num">2</td><td class="num">3</td><td>·</td></tr><tr><td><code>/</code></td><td>mobile</td><td>200</td><td class="num">5</td><td class="num">2</td><td class="num">·</td><td>·</td></tr><tr><td><code>/shop</code></td><td>mobile</td><td>200</td><td class="num">5</td><td class="num">3</td><td class="num">·</td><td>·</td></tr><tr><td><code>/about</code></td><td>mobile</td><td>200</td><td class="num">6</td><td class="num">2</td><td class="num">·</td><td>·</td></tr><tr><td><code>/faq</code></td><td>mobile</td><td>200</td><td class="num">6</td><td class="num">2</td><td class="num">·</td><td>·</td></tr><tr><td><code>/contact</code></td><td>mobile</td><td>200</td><td class="num">6</td><td class="num">2</td><td class="num">·</td><td>·</td></tr><tr><td><code>/policies/shipping-returns</code></td><td>mobile</td><td>200</td><td class="num">6</td><td class="num">2</td><td class="num">·</td><td>·</td></tr><tr><td><code>/policies/privacy</code></td><td>mobile</td><td>200</td><td class="num">6</td><td class="num">2</td><td class="num">·</td><td>·</td></tr><tr><td><code>/policies/terms</code></td><td>mobile</td><td>200</td><td class="num">6</td><td class="num">2</td><td class="num">·</td><td>·</td></tr><tr><td><code>/collections/bestsellers</code></td><td>mobile</td><td>200</td><td class="num">5</td><td class="num">3</td><td class="num">·</td><td>·</td></tr><tr><td><code>/collections/lips</code></td><td>mobile</td><td>200</td><td class="num">5</td><td class="num">3</td><td class="num">·</td><td>·</td></tr></tbody>
+  </table></div>
+
+  <h2>What happens next</h2>
+  <div class="next">
+    <p><b>The fix.</b> Alongside this report is a file called ACCESSIBILITY-FIX.md. It contains every finding above with exact instructions a developer, or an AI coding assistant working in the site's own code, follows to fix them. On a well-built site that is a day or two of work; on an older template site it can be more, but the file says exactly what to change.</p>
+    <p><b>The proof.</b> After the fixes, the same scan runs again and produces a before-and-after record. Keep it with the business's files.</p>
+    <p><b>What this is not.</b> A scan is not a legal certification, and no tool can promise a business will never receive a demand letter. What it does is remove the failures the automated scanners find, which is how businesses end up on those lists in the first place. This report is not legal advice.</p>
+  </div>
+
+  <footer>Smart Scale Accessibility Scanner v0.1.0 · Smart Scale, Katy, Texas · smartscaleagent.com</footer>
+</div>
+</body>
+</html>
