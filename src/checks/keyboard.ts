@@ -20,6 +20,10 @@ export interface FocusStop {
   hiddenBy?: string;
   offscreen: boolean;
   href?: string;
+  /** Per-page identity of the focused node, so two unlabeled inputs in a row are not mistaken for one. */
+  elId?: number;
+  /** A native date/time input whose internal fields take several Tab presses. */
+  composite?: boolean;
 }
 
 export interface KeyboardResult {
@@ -60,10 +64,17 @@ const STOP_SNAPSHOT = `
       if (s.visibility === "hidden" || s.display === "none" || s.opacity === "0") { hidden = true; hiddenBy = desc(n) + " " + (s.display === "none" ? "display:none" : s.visibility === "hidden" ? "visibility:hidden" : "opacity:0"); break; }
       n = n.parentElement;
     }
+    // Chrome moves through the month/day/year fields and the picker button
+    // of a native date or time input on successive Tab presses while
+    // activeElement stays the same node. Those internal stops draw their
+    // own focus ring in the shadow DOM, which computed style cannot see.
+    const composite = el.tagName === "INPUT" && /^(date|time|datetime-local|month|week)$/.test(el.type || "");
+    if (!el.__ssaId) el.__ssaId = (window.__ssaSeq = (window.__ssaSeq || 0) + 1);
     const r = el.getBoundingClientRect();
     const offscreen = r.width === 0 || r.height === 0 || r.bottom < 0 || r.right < 0 || r.left > innerWidth || r.top > innerHeight + 2000;
-    const name = (el.getAttribute("aria-label") || el.textContent || el.getAttribute("title") || el.getAttribute("placeholder") || "").replace(/\\s+/g, " ").trim().slice(0, 60);
-    return { tag: el.tagName, name, visibleFocus: hasOutline || Boolean(hasShadow) || borderChange, hidden, hiddenBy, offscreen, href: el.getAttribute("href") || undefined };
+    const labelText = el.labels && el.labels[0] ? el.labels[0].textContent : "";
+    const name = (el.getAttribute("aria-label") || el.textContent || labelText || el.getAttribute("title") || el.getAttribute("placeholder") || "").replace(/\\s+/g, " ").trim().slice(0, 60);
+    return { tag: el.tagName, name, visibleFocus: hasOutline || Boolean(hasShadow) || borderChange, hidden, hiddenBy, offscreen, href: el.getAttribute("href") || undefined, elId: el.__ssaId, composite };
   })()
 `;
 
@@ -94,17 +105,19 @@ export async function keyboardWalk(page: Page, maxStops = 80): Promise<KeyboardR
       continue;
     }
     inFrame = 0;
-    // A section that is fading in on scroll reads as opacity 0 for a moment.
-    // Give it a beat before calling it hidden.
-    if (s.hidden) {
-      await sleep(450);
+    // A section that is fading in on scroll reads as opacity 0 for a moment,
+    // and fades of up to a second are common. Poll rather than judge the first frame.
+    for (let waited = 0; s.hidden && waited < 1500; waited += 300) {
+      await sleep(300);
       s = await page.evaluate<Omit<FocusStop, "index">>(STOP_SNAPSHOT);
     }
     const stop: FocusStop = { index: i + 1, ...s };
     const prev = stops[stops.length - 1];
-    if (prev && prev.tag === stop.tag && prev.name === stop.name && prev.href === stop.href) {
+    if (prev && prev.elId === stop.elId) {
       repeat++;
-      if (repeat >= 3 && !trap) trap = stop;
+      if (repeat >= (stop.composite ? 6 : 3) && !trap) trap = stop;
+      // An internal field of a native date input: Chrome draws that ring itself.
+      if (stop.composite) stop.visibleFocus = true;
     } else {
       repeat = 0;
     }
@@ -113,7 +126,9 @@ export async function keyboardWalk(page: Page, maxStops = 80): Promise<KeyboardR
 
   const first = stops[0];
   let skipLink: KeyboardResult["skipLink"] = { present: false };
-  if (first && first.tag === "A" && /skip/i.test(first.name) && first.href?.startsWith("#")) {
+  // Any in-page anchor as the very first stop is a skip link, whatever its
+  // wording ("Skip to main content", "Saltar al contenido principal", ...).
+  if (first && first.tag === "A" && first.href && first.href.length > 1 && first.href.startsWith("#")) {
     const id = first.href.slice(1);
     const target = await page.evaluate<{ exists: boolean; focusable: boolean }>(`
       (() => {

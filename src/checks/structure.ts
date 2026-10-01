@@ -37,7 +37,8 @@ export const STRUCTURE_SCRIPT = `
     const filenameAlt = imgs.map((i) => i.getAttribute("alt") || "").filter((a) => /\\.(jpe?g|png|webp|gif|svg)$/i.test(a) || /^(img|image|dsc|photo)[-_ ]?\\d+/i.test(a)).slice(0, 5);
     const iframesWithoutTitle = [...document.querySelectorAll("iframe")].filter((f) => !f.getAttribute("title")).map((f) => (f.getAttribute("src") || "").slice(0, 80));
     const newTab = [...document.querySelectorAll('a[target="_blank"]')];
-    const hinted = (a) => /new (tab|window)|opens in/i.test(text(a) + " " + (a.getAttribute("title") || ""));
+    // "(opens in new tab)" and its common translations.
+    const hinted = (a) => /new (tab|window)|opens in|nueva (pestaña|ventana)|(pestaña|ventana) nueva|se abre en|nouvel(le)? (onglet|fenêtre)|s'ouvre dans|neue[mrs]? (tab|fenster|registerkarte)|öffnet (sich )?in|nova (aba|guia|janela)|abre em|nuova (scheda|finestra)|si apre in/i.test(text(a) + " " + (a.getAttribute("title") || ""));
     const newTabNoHint = newTab.filter((a) => !hinted(a));
     const generic = [...document.querySelectorAll("a[href]")].filter((a) => /^(click here|read more|learn more|more|here|link)$/i.test(text(a))).length;
     const autoplay = [...document.querySelectorAll("video[autoplay],audio[autoplay]")].filter((v) => !v.hasAttribute("controls")).length;
@@ -49,7 +50,7 @@ export const STRUCTURE_SCRIPT = `
         if (total > 5000) longAnimations++;
       }
     } catch {}
-    const pauseControls = [...document.querySelectorAll("button,a,[role=button]")].filter((b) => /\\b(pause|stop|play)\\b/i.test(text(b) + " " + (b.getAttribute("title") || ""))).length;
+    const pauseControls = [...document.querySelectorAll("button,a,[role=button]")].filter((b) => /\\b(pause|pausa|pausar|pauser|pausieren|stop|play|detener|reproducir|reprendre|anhalten|parar|retomar)\\b/i.test(text(b) + " " + (b.getAttribute("aria-label") || "") + " " + (b.getAttribute("title") || ""))).length;
     const overlaySel = ['[class*="acsb"]', "#userwayAccessibilityIcon", "[data-acsb]", 'script[src*="accessibe"]', 'script[src*="userway"]', 'script[src*="audioeye"]', 'script[src*="equalweb"]', 'script[src*="allyable"]', 'script[src*="accessiway"]', 'script[src*="adally"]', 'script[src*="accessibility-widget"]'];
     let overlay = null;
     for (const s of overlaySel) { if (document.querySelector(s)) { overlay = s.replace(/[\\[\\]'"*=script src]/g, "").replace("class", "").replace("data-", "") || s; break; } }
