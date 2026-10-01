@@ -1,0 +1,923 @@
+{
+  "tool": "Smart Scale Accessibility Scanner",
+  "version": "0.1.0",
+  "standard": "WCAG 2.2 Level AA",
+  "scannedAt": "2026-09-28T22:00:53.295Z",
+  "base": "https://ascension-group-landing-page.vercel.app",
+  "label": "Ascension Group",
+  "stack": "Next.js, hosted on Vercel",
+  "pageSource": "links",
+  "durationMs": 66726,
+  "pages": [
+    {
+      "path": "/",
+      "url": "https://ascension-group-landing-page.vercel.app/",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Ascension Athlete Group | Athlete Development in Houston, TX",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-required-children",
+            "impact": "critical",
+            "help": "Certain ARIA roles must contain particular children",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag131"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"marquee mt-12 overflow-hidden border-y border-white/10 py-10\" role=\"list\" aria-label=\"Teams our athletes have signed with\">",
+                "target": "div[role=\"list\"]",
+                "message": "Element has children which are not allowed: img"
+              }
+            ]
+          },
+          {
+            "id": "link-in-text-block",
+            "impact": "serious",
+            "help": "Links must be distinguishable without relying on color",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag141"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<a href=\"https://smartscaleagent.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-silver transition-colors hover:text-gold\">Smart Scale, LLC</a>",
+                "target": "a[href$=\"smartscaleagent.com/\"]",
+                "message": "The link has insufficient color contrast of 1.96:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c4c6cb, surrounding text: #8a8c92)"
+              }
+            ]
+          }
+        ],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 20
+        },
+        "incomplete": {
+          "aria-hidden-focus": 1,
+          "color-contrast": 20
+        },
+        "passes": 48
+      },
+      "structure": {
+        "title": "Ascension Athlete Group | Athlete Development in Houston, TX",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Developing athletesbeyond the Game"
+          },
+          {
+            "level": 2,
+            "text": "We do not simply train athletes.We help build careers."
+          },
+          {
+            "level": 3,
+            "text": "Elite Coaching and Mentorship"
+          },
+          {
+            "level": 3,
+            "text": "Real Player Development"
+          },
+          {
+            "level": 3,
+            "text": "Individualized Attention"
+          },
+          {
+            "level": 3,
+            "text": "Performance plus Life"
+          },
+          {
+            "level": 2,
+            "text": "Three divisions. One mission."
+          },
+          {
+            "level": 3,
+            "text": "Performance"
+          },
+          {
+            "level": 3,
+            "text": "Advisory"
+          },
+          {
+            "level": 3,
+            "text": "Talent Network"
+          },
+          {
+            "level": 2,
+            "text": "Partner with Ascension."
+          },
+          {
+            "level": 3,
+            "text": "Agency Partnership Packages"
+          },
+          {
+            "level": 3,
+            "text": "Partner"
+          },
+          {
+            "level": 3,
+            "text": "Elite Partner"
+          },
+          {
+            "level": 2,
+            "text": "Our athletes are signing."
+          },
+          {
+            "level": 2,
+            "text": "In their words."
+          },
+          {
+            "level": 2,
+            "text": "Pro Day Prep Camp"
+          },
+          {
+            "level": 2,
+            "text": "The coaches in your corner."
+          },
+          {
+            "level": 2,
+            "text": "Start yourascension."
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 24,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 3,
+        "newTabSamples": [
+          "@ascensionathletegroup",
+          "Instagram @ascensionathletegroup",
+          "Smart Scale, LLC"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 4,
+          "longAnimations": 2,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 43,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": false
+        },
+        "invisibleFocus": [
+          {
+            "index": 28,
+            "tag": "INPUT",
+            "name": "Full name",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false,
+            "elId": 28,
+            "composite": false
+          },
+          {
+            "index": 29,
+            "tag": "INPUT",
+            "name": "Email",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false,
+            "elId": 29,
+            "composite": false
+          },
+          {
+            "index": 30,
+            "tag": "INPUT",
+            "name": "Phone",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false,
+            "elId": 30,
+            "composite": false
+          },
+          {
+            "index": 31,
+            "tag": "INPUT",
+            "name": "Sport and position",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false,
+            "elId": 31,
+            "composite": false
+          },
+          {
+            "index": 32,
+            "tag": "SELECT",
+            "name": "Select oneHigh schoolCollegeProfessionalParent or guardianAg",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false,
+            "elId": 32,
+            "composite": false
+          },
+          {
+            "index": 33,
+            "tag": "SELECT",
+            "name": "Book a consultationPerformance trainingAthlete advisoryPerfo",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false,
+            "elId": 33,
+            "composite": false
+          },
+          {
+            "index": 34,
+            "tag": "TEXTAREA",
+            "name": "Message",
+            "visibleFocus": false,
+            "hidden": false,
+            "offscreen": false,
+            "elId": 34,
+            "composite": false
+          }
+        ],
+        "hiddenFocus": [
+          {
+            "index": 1,
+            "tag": "A",
+            "name": "Ascension Athlete Group home",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "header.sticky.top-0 aria-hidden",
+            "offscreen": true,
+            "href": "/",
+            "elId": 1,
+            "composite": false
+          },
+          {
+            "index": 2,
+            "tag": "A",
+            "name": "Divisions",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "header.sticky.top-0 aria-hidden",
+            "offscreen": true,
+            "href": "/#services",
+            "elId": 2,
+            "composite": false
+          },
+          {
+            "index": 3,
+            "tag": "A",
+            "name": "Partnerships",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "header.sticky.top-0 aria-hidden",
+            "offscreen": true,
+            "href": "/#partnerships",
+            "elId": 3,
+            "composite": false
+          },
+          {
+            "index": 4,
+            "tag": "A",
+            "name": "Events",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "header.sticky.top-0 aria-hidden",
+            "offscreen": true,
+            "href": "/#events",
+            "elId": 4,
+            "composite": false
+          },
+          {
+            "index": 5,
+            "tag": "A",
+            "name": "Founders",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "header.sticky.top-0 aria-hidden",
+            "offscreen": true,
+            "href": "/founders",
+            "elId": 5,
+            "composite": false
+          },
+          {
+            "index": 6,
+            "tag": "A",
+            "name": "Contact",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "header.sticky.top-0 aria-hidden",
+            "offscreen": true,
+            "href": "/#contact",
+            "elId": 6,
+            "composite": false
+          },
+          {
+            "index": 7,
+            "tag": "A",
+            "name": "Book Now",
+            "visibleFocus": true,
+            "hidden": true,
+            "hiddenBy": "header.sticky.top-0 aria-hidden",
+            "offscreen": true,
+            "href": "/#contact",
+            "elId": 7,
+            "composite": false
+          }
+        ],
+        "trap": null,
+        "reachedEnd": true
+      },
+      "reflow": {
+        "horizontalScroll": true,
+        "overflowPx": 38,
+        "offenders": [
+          "span.eyebrow.text-silver-2",
+          "div.marquee-track.slow",
+          "span.flex.items-center",
+          "span.font-display.px-8",
+          "span.block.h-1.5",
+          "span.flex.items-center"
+        ]
+      },
+      "reducedMotion": {
+        "longAnimationsWithReduce": 0,
+        "autoplayWithReduce": 4
+      }
+    },
+    {
+      "path": "/founders",
+      "url": "https://ascension-group-landing-page.vercel.app/founders",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Meet the Founders | Ascension Athlete Group",
+      "axe": {
+        "violations": [
+          {
+            "id": "definition-list",
+            "impact": "serious",
+            "help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script>, <template> or <div> elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/definition-list?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag131"
+            ],
+            "count": 2,
+            "nodes": [
+              {
+                "html": "<dl class=\"mt-7 max-w-2xl space-y-3\">",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl",
+                "message": "Fix all of the following:\n  dl element has direct children that are not allowed: div > span, div > div"
+              },
+              {
+                "html": "<dl class=\"mt-7 max-w-2xl space-y-3\">",
+                "target": ".lg\\:\\[\\&\\>\\*\\:first-child\\]\\:order-2 > .lg\\:col-span-8 > dl",
+                "message": "Fix all of the following:\n  dl element has direct children that are not allowed: div > span, div > div"
+              }
+            ]
+          },
+          {
+            "id": "dlitem",
+            "impact": "serious",
+            "help": "<dt> and <dd> elements must be contained by a <dl>",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/dlitem?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag131"
+            ],
+            "count": 16,
+            "nodes": [
+              {
+                "html": "<dt class=\"inline font-semibold uppercase tracking-[0.08em] text-bone\">College<!-- -->: </dt>",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl > .leading-snug.gap-3.text-sm:nth-child(1) > div > dt",
+                "message": "Description list item does not have a <dl> parent element"
+              },
+              {
+                "html": "<dd class=\"inline text-silver\">Army West Point</dd>",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl > .leading-snug.gap-3.text-sm:nth-child(1) > div > dd",
+                "message": "Description list item does not have a <dl> parent element"
+              },
+              {
+                "html": "<dt class=\"inline font-semibold uppercase tracking-[0.08em] text-bone\">Pro experience<!-- -->: </dt>",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl > .leading-snug.gap-3.text-sm:nth-child(2) > div > dt",
+                "message": "Description list item does not have a <dl> parent element"
+              },
+              {
+                "html": "<dd class=\"inline text-silver\">Vegas Knight Hawks (2022-2023), Memphis Showboats (2023), San Antonio Gunslingers (2024), Frisco Fighters (2024)</dd>",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl > .leading-snug.gap-3.text-sm:nth-child(2) > div > dd",
+                "message": "Description list item does not have a <dl> parent element"
+              },
+              {
+                "html": "<dt class=\"inline font-semibold uppercase tracking-[0.08em] text-bone\">NFL workouts<!-- -->: </dt>",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl > .leading-snug.gap-3.text-sm:nth-child(3) > div > dt",
+                "message": "Description list item does not have a <dl> parent element"
+              },
+              {
+                "html": "<dd class=\"inline text-silver\">New York Giants, Seattle Seahawks, Buffalo Bills</dd>",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl > .leading-snug.gap-3.text-sm:nth-child(3) > div > dd",
+                "message": "Description list item does not have a <dl> parent element"
+              }
+            ]
+          },
+          {
+            "id": "link-in-text-block",
+            "impact": "serious",
+            "help": "Links must be distinguishable without relying on color",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag141"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<a href=\"https://smartscaleagent.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-silver transition-colors hover:text-gold\">Smart Scale, LLC</a>",
+                "target": "a[href$=\"smartscaleagent.com/\"]",
+                "message": "The link has insufficient color contrast of 1.96:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c4c6cb, surrounding text: #8a8c92)"
+              }
+            ]
+          }
+        ],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 10
+        },
+        "incomplete": {
+          "color-contrast": 10
+        },
+        "passes": 39
+      },
+      "structure": {
+        "title": "Meet the Founders | Ascension Athlete Group",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "The coaches in your corner."
+          },
+          {
+            "level": 2,
+            "text": "Jeff Ejekam"
+          },
+          {
+            "level": 2,
+            "text": "Kiante Northington"
+          },
+          {
+            "level": 2,
+            "text": "Ready for the next level?"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 5,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 2,
+        "newTabSamples": [
+          "Instagram @ascensionathletegroup",
+          "Smart Scale, LLC"
+        ],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 34,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": false
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [],
+        "trap": null,
+        "reachedEnd": true
+      },
+      "reflow": {
+        "horizontalScroll": true,
+        "overflowPx": 7,
+        "offenders": [
+          "span.eyebrow.text-silver-2",
+          "div.flex.flex-col",
+          "a.btn.btn-gold",
+          "a.btn.btn-outline"
+        ]
+      }
+    },
+    {
+      "path": "/",
+      "url": "https://ascension-group-landing-page.vercel.app/",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Ascension Athlete Group | Athlete Development in Houston, TX",
+      "axe": {
+        "violations": [
+          {
+            "id": "aria-required-children",
+            "impact": "critical",
+            "help": "Certain ARIA roles must contain particular children",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag131"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"marquee mt-12 overflow-hidden border-y border-white/10 py-10\" role=\"list\" aria-label=\"Teams our athletes have signed with\">",
+                "target": "div[role=\"list\"]",
+                "message": "Element has children which are not allowed: img"
+              }
+            ]
+          },
+          {
+            "id": "link-in-text-block",
+            "impact": "serious",
+            "help": "Links must be distinguishable without relying on color",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag141"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<a href=\"https://smartscaleagent.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-silver transition-colors hover:text-gold\">Smart Scale, LLC</a>",
+                "target": "a[href$=\"smartscaleagent.com/\"]",
+                "message": "The link has insufficient color contrast of 1.96:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c4c6cb, surrounding text: #8a8c92)"
+              }
+            ]
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "help": "All page content should be contained by landmarks",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=axeAPI",
+            "wcag": [],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"flex flex-col gap-6\"><a class=\"btn btn-gold w-full\" href=\"/#contact\">Book a Consultation</a><p class=\"eyebrow text-silver-2\">Houston, Texas</p></div>",
+                "target": ".py-10.h-full.justify-between > .gap-6.flex-col.flex",
+                "message": "Some page content is not contained by landmarks"
+              }
+            ]
+          }
+        ],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 36
+        },
+        "incomplete": {
+          "aria-hidden-focus": 1,
+          "color-contrast": 36,
+          "no-autoplay-audio": 4
+        },
+        "passes": 48
+      }
+    },
+    {
+      "path": "/founders",
+      "url": "https://ascension-group-landing-page.vercel.app/founders",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Meet the Founders | Ascension Athlete Group",
+      "axe": {
+        "violations": [
+          {
+            "id": "definition-list",
+            "impact": "serious",
+            "help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script>, <template> or <div> elements",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/definition-list?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag131"
+            ],
+            "count": 2,
+            "nodes": [
+              {
+                "html": "<dl class=\"mt-7 max-w-2xl space-y-3\">",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl",
+                "message": "Fix all of the following:\n  dl element has direct children that are not allowed: div > span, div > div"
+              },
+              {
+                "html": "<dl class=\"mt-7 max-w-2xl space-y-3\">",
+                "target": ".lg\\:\\[\\&\\>\\*\\:first-child\\]\\:order-2 > .lg\\:col-span-8 > dl",
+                "message": "Fix all of the following:\n  dl element has direct children that are not allowed: div > span, div > div"
+              }
+            ]
+          },
+          {
+            "id": "dlitem",
+            "impact": "serious",
+            "help": "<dt> and <dd> elements must be contained by a <dl>",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/dlitem?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag131"
+            ],
+            "count": 16,
+            "nodes": [
+              {
+                "html": "<dt class=\"inline font-semibold uppercase tracking-[0.08em] text-bone\">College<!-- -->: </dt>",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl > .leading-snug.gap-3.text-sm:nth-child(1) > div > dt",
+                "message": "Description list item does not have a <dl> parent element"
+              },
+              {
+                "html": "<dd class=\"inline text-silver\">Army West Point</dd>",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl > .leading-snug.gap-3.text-sm:nth-child(1) > div > dd",
+                "message": "Description list item does not have a <dl> parent element"
+              },
+              {
+                "html": "<dt class=\"inline font-semibold uppercase tracking-[0.08em] text-bone\">Pro experience<!-- -->: </dt>",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl > .leading-snug.gap-3.text-sm:nth-child(2) > div > dt",
+                "message": "Description list item does not have a <dl> parent element"
+              },
+              {
+                "html": "<dd class=\"inline text-silver\">Vegas Knight Hawks (2022-2023), Memphis Showboats (2023), San Antonio Gunslingers (2024), Frisco Fighters (2024)</dd>",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl > .leading-snug.gap-3.text-sm:nth-child(2) > div > dd",
+                "message": "Description list item does not have a <dl> parent element"
+              },
+              {
+                "html": "<dt class=\"inline font-semibold uppercase tracking-[0.08em] text-bone\">NFL workouts<!-- -->: </dt>",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl > .leading-snug.gap-3.text-sm:nth-child(3) > div > dt",
+                "message": "Description list item does not have a <dl> parent element"
+              },
+              {
+                "html": "<dd class=\"inline text-silver\">New York Giants, Seattle Seahawks, Buffalo Bills</dd>",
+                "target": "#jeff-ejekam > .md\\:py-14.py-10.container-x > .lg\\:grid-cols-12.lg\\:gap-12.grid > .lg\\:col-span-8 > dl > .leading-snug.gap-3.text-sm:nth-child(3) > div > dd",
+                "message": "Description list item does not have a <dl> parent element"
+              }
+            ]
+          },
+          {
+            "id": "link-in-text-block",
+            "impact": "serious",
+            "help": "Links must be distinguishable without relying on color",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "wcag": [
+              "wcag2a",
+              "wcag141"
+            ],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<a href=\"https://smartscaleagent.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-silver transition-colors hover:text-gold\">Smart Scale, LLC</a>",
+                "target": "a[href$=\"smartscaleagent.com/\"]",
+                "message": "The link has insufficient color contrast of 1.96:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c4c6cb, surrounding text: #8a8c92)"
+              }
+            ]
+          },
+          {
+            "id": "region",
+            "impact": "moderate",
+            "help": "All page content should be contained by landmarks",
+            "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=axeAPI",
+            "wcag": [],
+            "count": 1,
+            "nodes": [
+              {
+                "html": "<div class=\"flex flex-col gap-6\"><a class=\"btn btn-gold w-full\" href=\"/#contact\">Book a Consultation</a><p class=\"eyebrow text-silver-2\">Houston, Texas</p></div>",
+                "target": ".gap-6",
+                "message": "Some page content is not contained by landmarks"
+              }
+            ]
+          }
+        ],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 3
+        },
+        "incomplete": {
+          "color-contrast": 3
+        },
+        "passes": 40
+      }
+    }
+  ],
+  "summary": {
+    "pages": 2,
+    "pagesWithErrors": 0,
+    "axeViolations": 44,
+    "contrastElements": 0,
+    "contrastGroups": [],
+    "byRule": [
+      {
+        "id": "dlitem",
+        "help": "<dt> and <dd> elements must be contained by a <dl>",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/dlitem?application=axeAPI",
+        "impact": "serious",
+        "count": 32,
+        "pages": [
+          "/founders"
+        ],
+        "samples": [
+          {
+            "html": "<dt class=\"inline font-semibold uppercase tracking-[0.08em] text-bone\">College<!-- -->: </dt>",
+            "message": "Description list item does not have a <dl> parent element"
+          },
+          {
+            "html": "<dd class=\"inline text-silver\">Army West Point</dd>",
+            "message": "Description list item does not have a <dl> parent element"
+          },
+          {
+            "html": "<dt class=\"inline font-semibold uppercase tracking-[0.08em] text-bone\">Pro experience<!-- -->: </dt>",
+            "message": "Description list item does not have a <dl> parent element"
+          },
+          {
+            "html": "<dd class=\"inline text-silver\">Vegas Knight Hawks (2022-2023), Memphis Showboats (2023), San Antonio Gunslingers (2024), Frisco Fighters (2024)</dd>",
+            "message": "Description list item does not have a <dl> parent element"
+          },
+          {
+            "html": "<dt class=\"inline font-semibold uppercase tracking-[0.08em] text-bone\">NFL workouts<!-- -->: </dt>",
+            "message": "Description list item does not have a <dl> parent element"
+          },
+          {
+            "html": "<dd class=\"inline text-silver\">New York Giants, Seattle Seahawks, Buffalo Bills</dd>",
+            "message": "Description list item does not have a <dl> parent element"
+          }
+        ]
+      },
+      {
+        "id": "link-in-text-block",
+        "help": "Links must be distinguishable without relying on color",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+        "impact": "serious",
+        "count": 4,
+        "pages": [
+          "/",
+          "/founders"
+        ],
+        "samples": [
+          {
+            "html": "<a href=\"https://smartscaleagent.com/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-silver transition-colors hover:text-gold\">Smart Scale, LLC</a>",
+            "message": "The link has insufficient color contrast of 1.96:1 with the surrounding text. (Minimum contrast is 3:1, link text: #c4c6cb, surrounding text: #8a8c92)"
+          }
+        ]
+      },
+      {
+        "id": "definition-list",
+        "help": "<dl> elements must only directly contain properly-ordered <dt> and <dd> groups, <script>, <template> or <div> elements",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/definition-list?application=axeAPI",
+        "impact": "serious",
+        "count": 4,
+        "pages": [
+          "/founders"
+        ],
+        "samples": [
+          {
+            "html": "<dl class=\"mt-7 max-w-2xl space-y-3\">",
+            "message": "Fix all of the following:\n  dl element has direct children that are not allowed: div > span, div > div"
+          },
+          {
+            "html": "<dl class=\"mt-7 max-w-2xl space-y-3\">",
+            "message": "Fix all of the following:\n  dl element has direct children that are not allowed: div > span, div > div"
+          }
+        ]
+      },
+      {
+        "id": "aria-required-children",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=axeAPI",
+        "impact": "critical",
+        "count": 2,
+        "pages": [
+          "/"
+        ],
+        "samples": [
+          {
+            "html": "<div class=\"marquee mt-12 overflow-hidden border-y border-white/10 py-10\" role=\"list\" aria-label=\"Teams our athletes have signed with\">",
+            "message": "Element has children which are not allowed: img"
+          }
+        ]
+      },
+      {
+        "id": "region",
+        "help": "All page content should be contained by landmarks",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=axeAPI",
+        "impact": "moderate",
+        "count": 2,
+        "pages": [
+          "/",
+          "/founders"
+        ],
+        "samples": [
+          {
+            "html": "<div class=\"flex flex-col gap-6\"><a class=\"btn btn-gold w-full\" href=\"/#contact\">Book a Consultation</a><p class=\"eyebrow text-silver-2\">Houston, Texas</p></div>",
+            "message": "Some page content is not contained by landmarks"
+          }
+        ]
+      }
+    ],
+    "flags": [
+      {
+        "id": "no-skip-link",
+        "severity": "moderate",
+        "title": "No skip link",
+        "detail": "The first Tab press should offer a link past the navigation to the main content. A keyboard user must otherwise tab through every menu item on every page.",
+        "pages": [
+          "/",
+          "/founders"
+        ]
+      },
+      {
+        "id": "invisible-focus",
+        "severity": "serious",
+        "title": "Keyboard focus is invisible",
+        "detail": "7 of the first 43 tab stops show no focus indicator (for example: input \"Full name\", input \"Email\", input \"Phone\", input \"Sport and position\"). A keyboard user cannot see where they are.",
+        "pages": [
+          "/"
+        ]
+      },
+      {
+        "id": "hidden-focus",
+        "severity": "serious",
+        "title": "Hidden controls can be tabbed to",
+        "detail": "7 tab stops land on controls inside a hidden region (for example: a \"Ascension Athlete Group home\" inside header.sticky.top-0 aria-hidden; a \"Divisions\" inside header.sticky.top-0 aria-hidden; a \"Partnerships\" inside header.sticky.top-0 aria-hidden; a \"Events\" inside header.sticky.top-0 aria-hidden), usually a closed menu, drawer or modal.",
+        "pages": [
+          "/"
+        ]
+      },
+      {
+        "id": "new-tab-hint",
+        "severity": "minor",
+        "title": "Links open new tabs without saying so",
+        "detail": "3 links use target=\"_blank\" with no \"(opens in new tab)\" hint (for example: @ascensionathletegroup, Instagram @ascensionathletegroup, Smart Scale, LLC).",
+        "pages": [
+          "/"
+        ]
+      },
+      {
+        "id": "autoplay",
+        "severity": "serious",
+        "title": "Media plays automatically with no controls",
+        "detail": "4 autoplaying video or audio element(s) have no controls, so the visitor cannot pause them.",
+        "pages": [
+          "/"
+        ]
+      },
+      {
+        "id": "long-animation",
+        "severity": "moderate",
+        "title": "Content moves for more than five seconds with no pause control",
+        "detail": "2 animation(s) run longer than five seconds (a ticker, marquee or carousel) and the page has no visible pause, stop or play control. Pausing on hover or focus helps but is not a control a visitor can find; WCAG 2.2.2 asks for one.",
+        "pages": [
+          "/"
+        ]
+      },
+      {
+        "id": "ignores-reduced-motion",
+        "severity": "moderate",
+        "title": "Motion ignores the visitor's reduce-motion setting",
+        "detail": "With prefers-reduced-motion on, 0 long animation(s) and 4 autoplaying media element(s) keep running.",
+        "pages": [
+          "/"
+        ]
+      },
+      {
+        "id": "reflow",
+        "severity": "serious",
+        "title": "Page breaks at 400% zoom",
+        "detail": "At 320px wide the page scrolls sideways by 38px (span.eyebrow.text-silver-2, div.marquee-track.slow, span.flex.items-center). Low-vision users who zoom cannot read it.",
+        "pages": [
+          "/",
+          "/founders"
+        ]
+      }
+    ],
+    "problems": 13
+  }
+}

@@ -7,6 +7,8 @@ Read this first when picking the project back up. The README describes what the 
 - **v0.1 is on main and works end to end.** `node src/cli.ts scan <url>` produces `report.html`, `ACCESSIBILITY-FIX.md` and `scan.json`; `compare` diffs two scans. Tested on smartscaleagent.com (near clean), mextacohouse.com (34 problems, the rich example) and loved-beauty.vercel.app.
 - **It has already found one bug axe and a manual pass both missed:** smartscaleagent.com's navbar keeps two desktop layouts in the page and fades one out; the hidden one still had eight tabbable links. Fixed with `inert` in smart-scale-website-official PR #63. That is the keyboard walk earning its keep, and the story to tell when selling this.
 - **Baseline scans are committed under `scans/`** for andrethomaslaw.com and loved-beauty.vercel.app (2026-09-27-before). After each site's fixes land, run the scan again into a `-after` folder and `compare` the two. Mex Taco House gets its baseline the day it is fixed (they are open on the 27th; fix on a closed day).
+- **andrethomaslaw.com is done: 9 → 0 (2026-09-28-after, `compare.json` alongside).** The rescan exposed four scanner blind spots, all fixed the same day: English-only wording checks for skip links, new-tab hints and pause buttons (the Spanish pages were clean but flagged), and Chrome's native date input, whose month/day/year sub-fields read as a focus trap with no visible focus. The baseline's "focus trap" was that date input, never a real trap; say so if the before/after is ever shown to the client.
+- **ascension-group-landing-page.vercel.app scanned 2026-09-28 (13 problems, `scans/.../2026-09-28-before`).** Repo is `~/Desktop/Ascension Athlete Group`; a hand-annotated `ACCESSIBILITY-FIX.md` with file:line references is in it, not yet committed there. Rescan into a `-after` folder once the fixes land.
 - **Fix files are already in each client repo** as `ACCESSIBILITY-FIX.md` (written by hand on 2026-09-25, before the generator existed). The generator's output is close to them but not identical; when regenerating, keep the hand-written manual-check items if they are more specific.
 
 ## How the code is organized
@@ -37,6 +39,8 @@ Conventions that matter:
 
 - Focus that enters a cross-origin iframe (booking calendars, maps) is noted in `keyboard.embeddedFrames` and not judged. Right call, but the report does not show that list yet.
 - "Long animation with no pause control" fires on ticker/marquee patterns that pause on hover and focus. It is a legitimate 2.2.2 finding at moderate severity; the wording explains why.
+- Hidden-focus now waits up to 1.5s for a fade-in before judging. Sections that take longer than that to appear after focus lands are still flagged, and rightly so.
+- The reflow `offenders` list is DOM-order and includes children of `overflow:hidden` parents (marquee tracks), so the first entries can be a false lead. On Ascension the real 38px cause was `.btn` with `whitespace-nowrap`. Worth skipping descendants of clipped ancestors and sorting by right edge.
 - Reflow runs on the first three pages only, reduced-motion on the home page only, to keep a scan under two minutes.
 - No login, no cart state, no dialog probing yet.
 - The `hiddenBy` field on a hidden focus stop names the ancestor and how it hides (`opacity:0`, `aria-hidden`, ...). Useful; not yet in the HTML report.

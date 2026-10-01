@@ -1,0 +1,1608 @@
+{
+  "tool": "Smart Scale Accessibility Scanner",
+  "version": "0.1.0",
+  "standard": "WCAG 2.2 Level AA",
+  "scannedAt": "2026-09-28T19:38:17.706Z",
+  "base": "https://www.andrethomaslaw.com",
+  "label": "Andre Thomas Law",
+  "stack": "Next.js, hosted on Vercel",
+  "pageSource": "sitemap",
+  "durationMs": 251738,
+  "pages": [
+    {
+      "path": "/",
+      "url": "https://www.andrethomaslaw.com/",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Andre Thomas Law, PLLC — Houston Personal Injury Attorney",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 63,
+          "nonBmp": 6
+        },
+        "incomplete": {
+          "color-contrast": 76
+        },
+        "passes": 50
+      },
+      "structure": {
+        "title": "Andre Thomas Law, PLLC — Houston Personal Injury Attorney",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Houston, TX PersonalInjury Lawyer.Empowering your voice,ensuringrecove"
+          },
+          {
+            "level": 2,
+            "text": "Why Andre ThomasLaw, PLLC."
+          },
+          {
+            "level": 3,
+            "text": "Core Values and Approach"
+          },
+          {
+            "level": 3,
+            "text": "Experience and Expertise"
+          },
+          {
+            "level": 3,
+            "text": "Client-Centered Approach"
+          },
+          {
+            "level": 2,
+            "text": "Sixteen ways a lifegets interrupted."
+          },
+          {
+            "level": 3,
+            "text": "Car Accidents"
+          },
+          {
+            "level": 3,
+            "text": "Truck Accidents"
+          },
+          {
+            "level": 3,
+            "text": "Workplace Injuries"
+          },
+          {
+            "level": 3,
+            "text": "Premises Liability"
+          },
+          {
+            "level": 3,
+            "text": "Maritime & Offshore Injuries"
+          },
+          {
+            "level": 3,
+            "text": "Serious Injury & Wrongful Death"
+          },
+          {
+            "level": 2,
+            "text": "Meet Andre Thomas: Committed to Justice"
+          },
+          {
+            "level": 2,
+            "text": "The consultation is free.So is finding out where you stand."
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 14,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 0,
+        "newTabSamples": [],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 1,
+          "pauseControls": 2
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to main content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [],
+        "trap": null,
+        "reachedEnd": false
+      },
+      "reflow": {
+        "horizontalScroll": false,
+        "overflowPx": 0,
+        "offenders": []
+      },
+      "reducedMotion": {
+        "longAnimationsWithReduce": 0,
+        "autoplayWithReduce": 0
+      }
+    },
+    {
+      "path": "/es",
+      "url": "https://www.andrethomaslaw.com/es",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Andre Thomas Law, PLLC — Abogado de Lesiones Personales en Houston — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 8,
+          "pseudoContent": 62,
+          "nonBmp": 5
+        },
+        "incomplete": {
+          "color-contrast": 75
+        },
+        "passes": 50
+      },
+      "structure": {
+        "title": "Andre Thomas Law, PLLC — Abogado de Lesiones Personales en Houston — Andre Thomas Law, PLLC",
+        "lang": "es",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Abogado de LesionesPersonales en Houston.Damos fuerza a su voz,garanti"
+          },
+          {
+            "level": 2,
+            "text": "Por qué Andre ThomasLaw, PLLC."
+          },
+          {
+            "level": 3,
+            "text": "Valores y forma de trabajar"
+          },
+          {
+            "level": 3,
+            "text": "Experiencia y conocimiento"
+          },
+          {
+            "level": 3,
+            "text": "El cliente, en el centro"
+          },
+          {
+            "level": 2,
+            "text": "Dieciséis maneras en queuna vida se interrumpe."
+          },
+          {
+            "level": 3,
+            "text": "Accidentes de Auto"
+          },
+          {
+            "level": 3,
+            "text": "Accidentes de Camión"
+          },
+          {
+            "level": 3,
+            "text": "Lesiones Laborales"
+          },
+          {
+            "level": 3,
+            "text": "Responsabilidad del Propietario"
+          },
+          {
+            "level": 3,
+            "text": "Lesiones Marítimas y Costa Afuera"
+          },
+          {
+            "level": 3,
+            "text": "Lesiones Graves y Muerte por Negligencia"
+          },
+          {
+            "level": 2,
+            "text": "Conozca a Andre Thomas: comprometido con la justicia"
+          },
+          {
+            "level": 2,
+            "text": "La consulta es gratis.Saber en qué posición está, también."
+          },
+          {
+            "level": 2,
+            "text": "Navegar"
+          },
+          {
+            "level": 2,
+            "text": "Áreas de Práctica"
+          },
+          {
+            "level": 2,
+            "text": "Oficina"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 14,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 0,
+        "newTabSamples": [],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 1,
+          "pauseControls": 2
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Ir al contenido principal",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [],
+        "trap": null,
+        "reachedEnd": false
+      },
+      "reflow": {
+        "horizontalScroll": false,
+        "overflowPx": 0,
+        "offenders": []
+      }
+    },
+    {
+      "path": "/practice-areas",
+      "url": "https://www.andrethomaslaw.com/practice-areas",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Practice Areas — Houston Personal Injury Attorney — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 44,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 52
+        },
+        "passes": 50
+      },
+      "structure": {
+        "title": "Practice Areas — Houston Personal Injury Attorney — Andre Thomas Law, PLLC",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Practice Areasin Houston, TX"
+          },
+          {
+            "level": 2,
+            "text": "Criminal defense — felony and misdemeanor."
+          },
+          {
+            "level": 2,
+            "text": "The consultation is free.So is finding out where you stand."
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 9,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 0,
+        "newTabSamples": [],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 1
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 76,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to main content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [],
+        "trap": null,
+        "reachedEnd": true
+      },
+      "reflow": {
+        "horizontalScroll": false,
+        "overflowPx": 0,
+        "offenders": []
+      }
+    },
+    {
+      "path": "/es/areas-de-practica",
+      "url": "https://www.andrethomaslaw.com/es/areas-de-practica",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Áreas de Práctica — Abogado de Lesiones Personales en Houston — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 44,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 52
+        },
+        "passes": 50
+      },
+      "structure": {
+        "title": "Áreas de Práctica — Abogado de Lesiones Personales en Houston — Andre Thomas Law, PLLC",
+        "lang": "es",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Áreas de Prácticaen Houston, TX"
+          },
+          {
+            "level": 2,
+            "text": "Defensa criminal — delitos graves y menores."
+          },
+          {
+            "level": 2,
+            "text": "La consulta es gratis.Saber en qué posición está, también."
+          },
+          {
+            "level": 2,
+            "text": "Navegar"
+          },
+          {
+            "level": 2,
+            "text": "Áreas de Práctica"
+          },
+          {
+            "level": 2,
+            "text": "Oficina"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 9,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 0,
+        "newTabSamples": [],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 78,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Ir al contenido principal",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [],
+        "trap": null,
+        "reachedEnd": true
+      }
+    },
+    {
+      "path": "/about",
+      "url": "https://www.andrethomaslaw.com/about",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "About Andre Thomas — Houston Attorney, Licensed in TX & TN — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 47,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 55
+        },
+        "passes": 50
+      },
+      "structure": {
+        "title": "About Andre Thomas — Houston Attorney, Licensed in TX & TN — Andre Thomas Law, PLLC",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Meet Andre Thomas,Houston PersonalInjury Attorney"
+          },
+          {
+            "level": 2,
+            "text": "Both sides of the courtroom."
+          },
+          {
+            "level": 3,
+            "text": "Assistant District Attorney"
+          },
+          {
+            "level": 3,
+            "text": "Attorney"
+          },
+          {
+            "level": 3,
+            "text": "Founding Attorney"
+          },
+          {
+            "level": 2,
+            "text": "High-profile matters, argued in open court."
+          },
+          {
+            "level": 3,
+            "text": "He prosecuted before he protected"
+          },
+          {
+            "level": 3,
+            "text": "Licensed in two states"
+          },
+          {
+            "level": 3,
+            "text": "Tried in front of juries"
+          },
+          {
+            "level": 3,
+            "text": "You talk to the attorney"
+          },
+          {
+            "level": 2,
+            "text": "The consultation is free.So is finding out where you stand."
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 6,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 0,
+        "newTabSamples": [],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to main content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [],
+        "trap": null,
+        "reachedEnd": false
+      }
+    },
+    {
+      "path": "/es/nosotros",
+      "url": "https://www.andrethomaslaw.com/es/nosotros",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "El Abogado Andre Thomas — Houston, con Licencia en TX y TN — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 47,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 55
+        },
+        "passes": 50
+      },
+      "structure": {
+        "title": "El Abogado Andre Thomas — Houston, con Licencia en TX y TN — Andre Thomas Law, PLLC",
+        "lang": "es",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Conozca a Andre Thomas,Abogado de LesionesPersonales en Houston"
+          },
+          {
+            "level": 2,
+            "text": "Los dos lados del tribunal."
+          },
+          {
+            "level": 3,
+            "text": "Fiscal Auxiliar de Distrito"
+          },
+          {
+            "level": 3,
+            "text": "Abogado"
+          },
+          {
+            "level": 3,
+            "text": "Abogado Fundador"
+          },
+          {
+            "level": 2,
+            "text": "Casos de alto perfil, argumentados en audiencia pública."
+          },
+          {
+            "level": 3,
+            "text": "Fue fiscal antes de ser defensor"
+          },
+          {
+            "level": 3,
+            "text": "Con licencia en dos estados"
+          },
+          {
+            "level": 3,
+            "text": "Ha litigado ante jurados"
+          },
+          {
+            "level": 3,
+            "text": "Usted habla con el abogado"
+          },
+          {
+            "level": 2,
+            "text": "La consulta es gratis.Saber en qué posición está, también."
+          },
+          {
+            "level": 2,
+            "text": "Navegar"
+          },
+          {
+            "level": 2,
+            "text": "Áreas de Práctica"
+          },
+          {
+            "level": 2,
+            "text": "Oficina"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 6,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 0,
+        "newTabSamples": [],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 62,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Ir al contenido principal",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [],
+        "trap": null,
+        "reachedEnd": true
+      }
+    },
+    {
+      "path": "/reviews",
+      "url": "https://www.andrethomaslaw.com/reviews",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Client Reviews — 4.9 Stars Across 60 Google Reviews — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 46,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 54
+        },
+        "passes": 50
+      },
+      "structure": {
+        "title": "Client Reviews — 4.9 Stars Across 60 Google Reviews — Andre Thomas Law, PLLC",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Client Reviews — Andre Thomas Law, Houston"
+          },
+          {
+            "level": 2,
+            "text": "Diligence, determination, and empathy."
+          },
+          {
+            "level": 3,
+            "text": "He prosecuted before he protected"
+          },
+          {
+            "level": 3,
+            "text": "Licensed in two states"
+          },
+          {
+            "level": 3,
+            "text": "Tried in front of juries"
+          },
+          {
+            "level": 3,
+            "text": "You talk to the attorney"
+          },
+          {
+            "level": 2,
+            "text": "The consultation is free.So is finding out where you stand."
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 3,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 0,
+        "newTabSamples": [],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to main content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [],
+        "trap": null,
+        "reachedEnd": false
+      }
+    },
+    {
+      "path": "/es/resenas",
+      "url": "https://www.andrethomaslaw.com/es/resenas",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Reseñas de Clientes — 4.9 Estrellas en 60 Reseñas de Google — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 46,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 54
+        },
+        "passes": 50
+      },
+      "structure": {
+        "title": "Reseñas de Clientes — 4.9 Estrellas en 60 Reseñas de Google — Andre Thomas Law, PLLC",
+        "lang": "es",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Reseñas de Clientes — Andre Thomas Law, Houston"
+          },
+          {
+            "level": 2,
+            "text": "Diligencia, determinación y empatía."
+          },
+          {
+            "level": 3,
+            "text": "Fue fiscal antes de ser defensor"
+          },
+          {
+            "level": 3,
+            "text": "Con licencia en dos estados"
+          },
+          {
+            "level": 3,
+            "text": "Ha litigado ante jurados"
+          },
+          {
+            "level": 3,
+            "text": "Usted habla con el abogado"
+          },
+          {
+            "level": 2,
+            "text": "La consulta es gratis.Saber en qué posición está, también."
+          },
+          {
+            "level": 2,
+            "text": "Navegar"
+          },
+          {
+            "level": 2,
+            "text": "Áreas de Práctica"
+          },
+          {
+            "level": 2,
+            "text": "Oficina"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 3,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 0,
+        "newTabSamples": [],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 63,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Ir al contenido principal",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [],
+        "trap": null,
+        "reachedEnd": true
+      }
+    },
+    {
+      "path": "/contact",
+      "url": "https://www.andrethomaslaw.com/contact",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Contact — Free Consultation with Andre Thomas Law — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 46,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 54,
+          "frame-tested": 1
+        },
+        "passes": 52
+      },
+      "structure": {
+        "title": "Contact — Free Consultation with Andre Thomas Law — Andre Thomas Law, PLLC",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Tell uswhat happened."
+          },
+          {
+            "level": 2,
+            "text": "No one should have to guess what comes next."
+          },
+          {
+            "level": 3,
+            "text": "The consultation"
+          },
+          {
+            "level": 3,
+            "text": "The investigation"
+          },
+          {
+            "level": 3,
+            "text": "The demand"
+          },
+          {
+            "level": 3,
+            "text": "Trial, if that is what it takes"
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 4,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 0,
+        "newTabSamples": [],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 77,
+        "embeddedFrames": [
+          "Map to Andre Thomas Law, PLLC"
+        ],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to main content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [],
+        "trap": null,
+        "reachedEnd": false
+      }
+    },
+    {
+      "path": "/es/contacto",
+      "url": "https://www.andrethomaslaw.com/es/contacto",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Contacto — Consulta Gratis con Andre Thomas Law — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 46,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 54,
+          "frame-tested": 1
+        },
+        "passes": 52
+      },
+      "structure": {
+        "title": "Contacto — Consulta Gratis con Andre Thomas Law — Andre Thomas Law, PLLC",
+        "lang": "es",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Cuéntenosqué pasó."
+          },
+          {
+            "level": 2,
+            "text": "Nadie debería tener que adivinar qué sigue."
+          },
+          {
+            "level": 3,
+            "text": "La consulta"
+          },
+          {
+            "level": 3,
+            "text": "La investigación"
+          },
+          {
+            "level": 3,
+            "text": "La reclamación"
+          },
+          {
+            "level": 3,
+            "text": "Juicio, si eso es lo que hace falta"
+          },
+          {
+            "level": 2,
+            "text": "Navegar"
+          },
+          {
+            "level": 2,
+            "text": "Áreas de Práctica"
+          },
+          {
+            "level": 2,
+            "text": "Oficina"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 4,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 0,
+        "newTabSamples": [],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 61,
+        "embeddedFrames": [
+          "Mapa hacia Andre Thomas Law, PLLC"
+        ],
+        "skipLink": {
+          "present": true,
+          "text": "Ir al contenido principal",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [],
+        "trap": null,
+        "reachedEnd": true
+      }
+    },
+    {
+      "path": "/accessibility",
+      "url": "https://www.andrethomaslaw.com/accessibility",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Accessibility Statement — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 43,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 51
+        },
+        "passes": 42
+      },
+      "structure": {
+        "title": "Accessibility Statement — Andre Thomas Law, PLLC",
+        "lang": "en",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Accessibility Statement"
+          },
+          {
+            "level": 2,
+            "text": "Our commitment"
+          },
+          {
+            "level": 2,
+            "text": "What we have done"
+          },
+          {
+            "level": 2,
+            "text": "Known limitations"
+          },
+          {
+            "level": 2,
+            "text": "Tell us about a problem"
+          },
+          {
+            "level": 2,
+            "text": "Navigate"
+          },
+          {
+            "level": 2,
+            "text": "Practice Areas"
+          },
+          {
+            "level": 2,
+            "text": "Office"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 3,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 0,
+        "newTabSamples": [],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 80,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Skip to main content",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [],
+        "trap": null,
+        "reachedEnd": false
+      }
+    },
+    {
+      "path": "/es/accesibilidad",
+      "url": "https://www.andrethomaslaw.com/es/accesibilidad",
+      "viewport": "desktop",
+      "status": 200,
+      "title": "Declaración de Accesibilidad — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 7,
+          "pseudoContent": 43,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 51
+        },
+        "passes": 42
+      },
+      "structure": {
+        "title": "Declaración de Accesibilidad — Andre Thomas Law, PLLC",
+        "lang": "es",
+        "h1Count": 1,
+        "headings": [
+          {
+            "level": 1,
+            "text": "Declaración de Accesibilidad"
+          },
+          {
+            "level": 2,
+            "text": "Nuestro compromiso"
+          },
+          {
+            "level": 2,
+            "text": "Lo que hemos hecho"
+          },
+          {
+            "level": 2,
+            "text": "Limitaciones conocidas"
+          },
+          {
+            "level": 2,
+            "text": "Infórmenos de un problema"
+          },
+          {
+            "level": 2,
+            "text": "Navegar"
+          },
+          {
+            "level": 2,
+            "text": "Áreas de Práctica"
+          },
+          {
+            "level": 2,
+            "text": "Oficina"
+          }
+        ],
+        "headingSkips": [],
+        "landmarks": {
+          "main": true,
+          "nav": true,
+          "header": true,
+          "footer": true,
+          "navsWithoutName": 0
+        },
+        "images": {
+          "total": 3,
+          "missingAlt": 0,
+          "filenameAlt": []
+        },
+        "iframesWithoutTitle": [],
+        "newTabLinksWithoutHint": 0,
+        "newTabSamples": [],
+        "genericLinkText": 0,
+        "media": {
+          "autoplayWithoutControls": 0,
+          "longAnimations": 0,
+          "pauseControls": 0
+        },
+        "overlay": null,
+        "formsWithoutSubmitText": 0
+      },
+      "keyboard": {
+        "stops": 47,
+        "embeddedFrames": [],
+        "skipLink": {
+          "present": true,
+          "text": "Ir al contenido principal",
+          "targetExists": true,
+          "targetFocusable": true
+        },
+        "invisibleFocus": [],
+        "hiddenFocus": [],
+        "trap": null,
+        "reachedEnd": true
+      }
+    },
+    {
+      "path": "/",
+      "url": "https://www.andrethomaslaw.com/",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Andre Thomas Law, PLLC — Houston Personal Injury Attorney",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 58,
+          "nonBmp": 3
+        },
+        "incomplete": {
+          "color-contrast": 62
+        },
+        "passes": 50
+      }
+    },
+    {
+      "path": "/es",
+      "url": "https://www.andrethomaslaw.com/es",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Andre Thomas Law, PLLC — Abogado de Lesiones Personales en Houston — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 3,
+          "pseudoContent": 58,
+          "nonBmp": 3
+        },
+        "incomplete": {
+          "color-contrast": 64
+        },
+        "passes": 50
+      }
+    },
+    {
+      "path": "/practice-areas",
+      "url": "https://www.andrethomaslaw.com/practice-areas",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Practice Areas — Houston Personal Injury Attorney — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 44,
+          "bgOverlap": 3,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 49
+        },
+        "passes": 50
+      }
+    },
+    {
+      "path": "/es/areas-de-practica",
+      "url": "https://www.andrethomaslaw.com/es/areas-de-practica",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Áreas de Práctica — Abogado de Lesiones Personales en Houston — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 3,
+          "pseudoContent": 44,
+          "bgOverlap": 3,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 51
+        },
+        "passes": 50
+      }
+    },
+    {
+      "path": "/about",
+      "url": "https://www.andrethomaslaw.com/about",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "About Andre Thomas — Houston Attorney, Licensed in TX & TN — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 47,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 49
+        },
+        "passes": 50
+      }
+    },
+    {
+      "path": "/es/nosotros",
+      "url": "https://www.andrethomaslaw.com/es/nosotros",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "El Abogado Andre Thomas — Houston, con Licencia en TX y TN — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 47,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 49
+        },
+        "passes": 50
+      }
+    },
+    {
+      "path": "/reviews",
+      "url": "https://www.andrethomaslaw.com/reviews",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Client Reviews — 4.9 Stars Across 60 Google Reviews — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 46,
+          "nonBmp": 2
+        },
+        "incomplete": {
+          "color-contrast": 49
+        },
+        "passes": 50
+      }
+    },
+    {
+      "path": "/es/resenas",
+      "url": "https://www.andrethomaslaw.com/es/resenas",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Reseñas de Clientes — 4.9 Estrellas en 60 Reseñas de Google — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 46,
+          "nonBmp": 2
+        },
+        "incomplete": {
+          "color-contrast": 49
+        },
+        "passes": 50
+      }
+    },
+    {
+      "path": "/contact",
+      "url": "https://www.andrethomaslaw.com/contact",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Contact — Free Consultation with Andre Thomas Law — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 46,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 48,
+          "frame-tested": 1
+        },
+        "passes": 52
+      }
+    },
+    {
+      "path": "/es/contacto",
+      "url": "https://www.andrethomaslaw.com/es/contacto",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Contacto — Consulta Gratis con Andre Thomas Law — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 46,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 48,
+          "frame-tested": 1
+        },
+        "passes": 52
+      }
+    },
+    {
+      "path": "/accessibility",
+      "url": "https://www.andrethomaslaw.com/accessibility",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Accessibility Statement — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 43,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 45
+        },
+        "passes": 42
+      }
+    },
+    {
+      "path": "/es/accesibilidad",
+      "url": "https://www.andrethomaslaw.com/es/accesibilidad",
+      "viewport": "mobile",
+      "status": 200,
+      "title": "Declaración de Accesibilidad — Andre Thomas Law, PLLC",
+      "axe": {
+        "violations": [],
+        "contrast": [],
+        "contrastElements": 0,
+        "undetermined": {
+          "bgGradient": 1,
+          "pseudoContent": 43,
+          "nonBmp": 1
+        },
+        "incomplete": {
+          "color-contrast": 45
+        },
+        "passes": 42
+      }
+    }
+  ],
+  "summary": {
+    "pages": 12,
+    "pagesWithErrors": 0,
+    "axeViolations": 0,
+    "contrastElements": 0,
+    "contrastGroups": [],
+    "byRule": [],
+    "flags": [],
+    "problems": 0
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "base": "https://www.andrethomaslaw.com",
+  "before": "2026-09-27T15:42:58.045Z",
+  "after": "2026-09-28T19:38:17.706Z",
+  "problemsBefore": 9,
+  "problemsAfter": 0,
+  "fixed": [
+    {
+      "key": "contrast",
+      "title": "Text contrast (elements)",
+      "before": 3,
+      "after": 0
+    },
+    {
+      "key": "rule:heading-order",
+      "title": "Heading levels should only increase by one",
+      "before": 4,
+      "after": 0
+    },
+    {
+      "key": "flag:invisible-focus",
+      "title": "Keyboard focus is invisible",
+      "before": 10,
+      "after": 0
+    },
+    {
+      "key": "flag:hidden-focus",
+      "title": "Hidden controls can be tabbed to",
+      "before": 4,
+      "after": 0
+    },
+    {
+      "key": "flag:focus-trap",
+      "title": "Keyboard focus gets trapped",
+      "before": 10,
+      "after": 0
+    },
+    {
+      "key": "flag:new-tab-hint",
+      "title": "Links open new tabs without saying so",
+      "before": 10,
+      "after": 0
+    },
+    {
+      "key": "flag:long-animation",
+      "title": "Content moves for more than five seconds with no pause control",
+      "before": 7,
+      "after": 0
+    },
+    {
+      "key": "flag:no-skip-link",
+      "title": "No skip link",
+      "before": 1,
+      "after": 0
+    }
+  ],
+  "remaining": [],
+  "introduced": []
+}

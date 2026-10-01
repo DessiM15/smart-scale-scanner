@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ascension Group · Accessibility Report</title>
+<style>
+  :root { --bg:#0C0B0A; --panel:#131211; --panel2:#1A1816; --line:rgba(255,255,255,.10); --text:#F5F2EE; --muted:rgba(255,255,255,.66); --red:#EF4444; --gold:#D9B26A; --ok:#5FBF85; --warn:#E0A83A; }
+  * { box-sizing:border-box }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.55 Inter, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  .wrap { max-width:1040px; margin:0 auto; padding:48px 20px 80px }
+  .eyebrow { font:11px/1 ui-monospace, Menlo, monospace; letter-spacing:.18em; text-transform:uppercase; color:var(--red) }
+  h1 { font-size:clamp(34px,5vw,56px); line-height:1.05; margin:12px 0 8px; letter-spacing:-.01em }
+  .lede { color:var(--muted); max-width:66ch; margin:0 }
+  .tiles { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:32px 0 }
+  .tile { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px 18px }
+  .tile b { display:block; font-size:34px; line-height:1; letter-spacing:-.02em; font-variant-numeric:tabular-nums }
+  .tile span { display:block; margin-top:8px; font:11px/1.3 ui-monospace, Menlo, monospace; letter-spacing:.14em; text-transform:uppercase; color:var(--muted) }
+  .tile.bad b { color:var(--red) } .tile.ok b { color:var(--ok) }
+  .verdict { border-left:3px solid var(--red); background:var(--panel2); padding:14px 18px; border-radius:0 10px 10px 0; max-width:70ch }
+  h2 { font-size:22px; margin:44px 0 12px }
+  .item { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:18px 20px; margin-bottom:12px }
+  .item header { display:flex; flex-wrap:wrap; gap:8px 14px; align-items:baseline }
+  .item h3 { margin:0; font-size:17px }
+  .sev { font:10px/1 ui-monospace, Menlo, monospace; letter-spacing:.14em; text-transform:uppercase; padding:5px 8px; border-radius:999px; border:1px solid var(--line) }
+  .sev.critical, .sev.serious { color:var(--red); border-color:rgba(239,68,68,.4) } .sev.moderate { color:var(--warn); border-color:rgba(224,168,58,.4) } .sev.minor { color:var(--muted) }
+  .count { color:var(--muted); font-size:13px }
+  .item p { color:var(--muted); margin:10px 0 0; max-width:72ch }
+  .item ul { margin:10px 0 0; padding-left:18px; color:var(--muted); font-size:13.5px }
+  .item code, td code, .samples li { font:12.5px/1.5 ui-monospace, Menlo, monospace }
+  .pages { margin-top:10px; font-size:12.5px; color:var(--muted) }
+  table { width:100%; border-collapse:collapse; font-size:14px; margin-top:8px }
+  th, td { text-align:left; padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top }
+  th { font:11px/1 ui-monospace, Menlo, monospace; letter-spacing:.12em; text-transform:uppercase; color:var(--muted) }
+  td.num { font-variant-numeric:tabular-nums; text-align:right } th:nth-child(n+4) { text-align:right }
+  .bad { color:var(--red) } .err { color:var(--warn) }
+  .tablewrap { overflow-x:auto }
+  .next { background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--red); border-radius:10px; padding:22px 24px; max-width:76ch }
+  .next p { margin:0 0 10px; color:var(--muted) } .next p:last-child { margin:0 }
+  footer { margin-top:48px; padding-top:18px; border-top:1px solid var(--line); font:11px/1.6 ui-monospace, Menlo, monospace; letter-spacing:.1em; text-transform:uppercase; color:var(--muted) }
+  @media (max-width:640px) { .wrap { padding:32px 16px 64px } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="eyebrow">Smart Scale Accessibility Scanner · WCAG 2.2 Level AA</p>
+  <h1>Ascension Group</h1>
+  <p class="lede">https://ascension-group-landing-page.vercel.app · scanned September 28, 2026 · 2 pages at desktop and phone widths · Next.js, hosted on Vercel</p>
+
+  <div class="tiles">
+    <div class="tile bad"><b>13</b><span>distinct problems</span></div>
+    <div class="tile"><b>8</b><span>critical or serious</span></div>
+    <div class="tile"><b>0</b><span>faint-text elements</span></div>
+    <div class="tile"><b>2</b><span>pages checked</span></div>
+  </div>
+
+  <div class="verdict"><b>13 distinct problems to fix.</b> Every one of them is a specific change in the site's code, listed below in plain words and in the accompanying fix file with exact instructions. Nothing here needs a rebuild.</div>
+
+  <h2>What fails, and what it means</h2>
+  
+  <div class="item">
+    <header><span class="sev critical">critical</span><h3>Certain ARIA roles must contain particular children</h3><span class="count">2 instances</span></header>
+    <p>Certain ARIA roles must contain particular children</p>
+    <ul class="samples"><li>&lt;div class=&quot;marquee mt-12 overflow-hidden border-y border-white/10 py-10&quot; role=&quot;list&quot; aria-label=&quot;Teams our athletes have signed with&quot;&gt;</li></ul>
+    <div class="pages">On: <code>/</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev serious">serious</span><h3>Keyboard focus is invisible</h3></header>
+    <p>7 of the first 43 tab stops show no focus indicator (for example: input &quot;Full name&quot;, input &quot;Email&quot;, input &quot;Phone&quot;, input &quot;Sport and position&quot;). A keyboard user cannot see where they are.</p>
+    
+    <div class="pages">On: <code>/</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev serious">serious</span><h3>Hidden controls can be tabbed to</h3></header>
+    <p>7 tab stops land on controls inside a hidden region (for example: a &quot;Ascension Athlete Group home&quot; inside header.sticky.top-0 aria-hidden; a &quot;Divisions&quot; inside header.sticky.top-0 aria-hidden; a &quot;Partnerships&quot; inside header.sticky.top-0 aria-hidden; a &quot;Events&quot; inside header.sticky.top-0 aria-hidden), usually a closed menu, drawer or modal.</p>
+    
+    <div class="pages">On: <code>/</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev serious">serious</span><h3>Media plays automatically with no controls</h3></header>
+    <p>4 autoplaying video or audio element(s) have no controls, so the visitor cannot pause them.</p>
+    
+    <div class="pages">On: <code>/</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev serious">serious</span><h3>Page breaks at 400% zoom</h3></header>
+    <p>At 320px wide the page scrolls sideways by 38px (span.eyebrow.text-silver-2, div.marquee-track.slow, span.flex.items-center). Low-vision users who zoom cannot read it.</p>
+    
+    <div class="pages">On: <code>/</code> <code>/founders</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev serious">serious</span><h3>&lt;dt&gt; and &lt;dd&gt; elements must be contained by a &lt;dl&gt;</h3><span class="count">32 instances</span></header>
+    <p>&lt;dt&gt; and &lt;dd&gt; elements must be contained by a &lt;dl&gt;</p>
+    <ul class="samples"><li>&lt;dt class=&quot;inline font-semibold uppercase tracking-[0.08em] text-bone&quot;&gt;College&lt;!-- --&gt;: &lt;/dt&gt;</li><li>&lt;dd class=&quot;inline text-silver&quot;&gt;Army West Point&lt;/dd&gt;</li><li>&lt;dt class=&quot;inline font-semibold uppercase tracking-[0.08em] text-bone&quot;&gt;Pro experience&lt;!-- --&gt;: &lt;/dt&gt;</li></ul>
+    <div class="pages">On: <code>/founders</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev serious">serious</span><h3>Links must be distinguishable without relying on color</h3><span class="count">4 instances</span></header>
+    <p>Links inside paragraphs that look like the surrounding text, so color-blind readers cannot find them.</p>
+    <ul class="samples"><li>&lt;a href=&quot;https://smartscaleagent.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot; class=&quot;text-silver transition-colors hover:text-gold&quot;&gt;Smart Scale, LLC&lt;/a&gt;</li></ul>
+    <div class="pages">On: <code>/</code> <code>/founders</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev serious">serious</span><h3>&lt;dl&gt; elements must only directly contain properly-ordered &lt;dt&gt; and &lt;dd&gt; groups, &lt;script&gt;, &lt;template&gt; or &lt;div&gt; elements</h3><span class="count">4 instances</span></header>
+    <p>&lt;dl&gt; elements must only directly contain properly-ordered &lt;dt&gt; and &lt;dd&gt; groups, &lt;script&gt;, &lt;template&gt; or &lt;div&gt; elements</p>
+    <ul class="samples"><li>&lt;dl class=&quot;mt-7 max-w-2xl space-y-3&quot;&gt;</li><li>&lt;dl class=&quot;mt-7 max-w-2xl space-y-3&quot;&gt;</li></ul>
+    <div class="pages">On: <code>/founders</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev moderate">moderate</span><h3>No skip link</h3></header>
+    <p>The first Tab press should offer a link past the navigation to the main content. A keyboard user must otherwise tab through every menu item on every page.</p>
+    
+    <div class="pages">On: <code>/</code> <code>/founders</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev moderate">moderate</span><h3>Content moves for more than five seconds with no pause control</h3></header>
+    <p>2 animation(s) run longer than five seconds (a ticker, marquee or carousel) and the page has no visible pause, stop or play control. Pausing on hover or focus helps but is not a control a visitor can find; WCAG 2.2.2 asks for one.</p>
+    
+    <div class="pages">On: <code>/</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev moderate">moderate</span><h3>Motion ignores the visitor&#39;s reduce-motion setting</h3></header>
+    <p>With prefers-reduced-motion on, 0 long animation(s) and 4 autoplaying media element(s) keep running.</p>
+    
+    <div class="pages">On: <code>/</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev moderate">moderate</span><h3>All page content should be contained by landmarks</h3><span class="count">2 instances</span></header>
+    <p>Content sitting outside any landmark (header, nav, main, footer). Screen reader users jump between landmarks; content outside them is hard to reach.</p>
+    <ul class="samples"><li>&lt;div class=&quot;flex flex-col gap-6&quot;&gt;&lt;a class=&quot;btn btn-gold w-full&quot; href=&quot;/#contact&quot;&gt;Book a Consultation&lt;/a&gt;&lt;p class=&quot;eyebrow text-silver-2&quot;&gt;Houston, Texas&lt;/p&gt;&lt;/div&gt;</li></ul>
+    <div class="pages">On: <code>/</code> <code>/founders</code></div>
+  </div>
+  <div class="item">
+    <header><span class="sev minor">minor</span><h3>Links open new tabs without saying so</h3></header>
+    <p>3 links use target=&quot;_blank&quot; with no &quot;(opens in new tab)&quot; hint (for example: @ascensionathletegroup, Instagram @ascensionathletegroup, Smart Scale, LLC).</p>
+    
+    <div class="pages">On: <code>/</code></div>
+  </div>
+
+  <h2>Page by page</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Page</th><th>View</th><th>Status</th><th>Faint text</th><th>Other failures</th><th>Keyboard</th><th>400% zoom</th></tr></thead>
+    <tbody><tr><td><code>/</code></td><td>desktop</td><td>200</td><td class="num">0</td><td class="num">2</td><td class="num">14</td><td><span class="bad">sideways scroll</span></td></tr><tr><td><code>/founders</code></td><td>desktop</td><td>200</td><td class="num">0</td><td class="num">19</td><td class="num">0</td><td><span class="bad">sideways scroll</span></td></tr><tr><td><code>/</code></td><td>mobile</td><td>200</td><td class="num">0</td><td class="num">3</td><td class="num">·</td><td>·</td></tr><tr><td><code>/founders</code></td><td>mobile</td><td>200</td><td class="num">0</td><td class="num">20</td><td class="num">·</td><td>·</td></tr></tbody>
+  </table></div>
+
+  <h2>What happens next</h2>
+  <div class="next">
+    <p><b>The fix.</b> Alongside this report is a file called ACCESSIBILITY-FIX.md. It contains every finding above with exact instructions a developer, or an AI coding assistant working in the site's own code, follows to fix them. On a well-built site that is a day or two of work; on an older template site it can be more, but the file says exactly what to change.</p>
+    <p><b>The proof.</b> After the fixes, the same scan runs again and produces a before-and-after record. Keep it with the business's files.</p>
+    <p><b>What this is not.</b> A scan is not a legal certification, and no tool can promise a business will never receive a demand letter. What it does is remove the failures the automated scanners find, which is how businesses end up on those lists in the first place. This report is not legal advice.</p>
+  </div>
+
+  <footer>Smart Scale Accessibility Scanner v0.1.0 · Smart Scale, Katy, Texas · smartscaleagent.com</footer>
+</div>
+</body>
+</html>
