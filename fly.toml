@@ -4,7 +4,12 @@
 #   fly launch --no-deploy --copy-config --name smart-scale-scan
 #   fly secrets set SSA_WORKER_SECRET=<the same value the website holds>
 #   fly deploy
+#   fly scale count 1
 #   curl https://smart-scale-scan.fly.dev/health
+#
+# Deployed 2026-10-03. Later deploys are just `fly deploy`. Keep one machine:
+# the queue lives in memory, and a first deploy creates two. `fly launch`
+# rewrites this file and adds a .github deploy workflow; undo both.
 #
 # The machine stops when idle and starts on the first request, so a scan
 # that arrives after a quiet spell waits a few seconds longer. Memory is

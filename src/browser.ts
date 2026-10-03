@@ -125,7 +125,10 @@ export class Chrome {
       { stdio: "ignore" },
     );
     let wsUrl = "";
-    for (let i = 0; i < 40 && !wsUrl; i++) {
+    // Up to 30 seconds: on a machine that has just woken from a stop, the
+    // first Chrome start reads the whole binary from a cold disk and takes
+    // about 12 seconds (measured on Fly, shared-cpu-2x). Warm, it is under one.
+    for (let i = 0; i < 120 && !wsUrl; i++) {
       try {
         const port = Number(readFileSync(join(profileDir, "DevToolsActivePort"), "utf8").split("\n")[0]);
         const r = await fetch(`http://127.0.0.1:${port}/json/version`);
