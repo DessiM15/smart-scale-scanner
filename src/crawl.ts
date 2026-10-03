@@ -83,6 +83,51 @@ export async function discoverPages(
   return { paths: paths.slice(0, maxPages), source: "links" };
 }
 
+/** What a visitor would look at after the home page, most useful first. */
+const LEAD_PAGE_HINTS = [/contact/, /service/, /menu/, /about/, /shop|store|product/];
+const LEAD_PAGE_SKIP = /cart|checkout|login|log-in|signin|sign-in|account|privacy|terms|policy|policies/;
+/** Other addresses for the home page, which would be scanned twice and read as "every page has the same title". */
+const HOME_ALIAS = /^\/(index|home|default)(\.\w+)?$/i;
+
+/**
+ * The pages for the short public scan: the home page plus up to two more,
+ * chosen from the site's own navigation. No sitemap fetch; the navigation
+ * is what a visitor sees, and it is already loaded.
+ */
+export async function pickLeadPages(homePage: Page, extra = 2): Promise<string[]> {
+  const links = await homePage.evaluate<{ path: string; text: string; inNav: boolean }[]>(`
+    (() => {
+      const seen = new Set();
+      const out = [];
+      for (const a of document.querySelectorAll("a[href]")) {
+        try {
+          const u = new URL(a.href);
+          if (u.origin !== location.origin) continue;
+          const p = u.pathname.replace(/\\/$/, "") || "/";
+          if (p === "/" || seen.has(p)) continue;
+          seen.add(p);
+          out.push({ path: p, text: (a.textContent || "").replace(/\\s+/g, " ").trim().toLowerCase().slice(0, 40), inNav: !!a.closest("header, nav, [role=navigation]") });
+        } catch {}
+      }
+      return out;
+    })()
+  `);
+  const usable = links.filter((l) => !SKIP_EXT.test(l.path) && !HOME_ALIAS.test(l.path) && !LEAD_PAGE_SKIP.test(l.path.toLowerCase()));
+  const nav = usable.filter((l) => l.inNav);
+  const pool = nav.length ? nav : usable;
+  const picked: string[] = [];
+  for (const hint of LEAD_PAGE_HINTS) {
+    if (picked.length >= extra) break;
+    const match = pool.find((l) => !picked.includes(l.path) && (hint.test(l.path.toLowerCase()) || hint.test(l.text)));
+    if (match) picked.push(match.path);
+  }
+  for (const l of pool) {
+    if (picked.length >= extra) break;
+    if (!picked.includes(l.path)) picked.push(l.path);
+  }
+  return ["/", ...picked];
+}
+
 /** Stack detection from response headers and markup. Drives the wording of the fix file. */
 export async function detectStack(base: string, homePage: Page): Promise<string> {
   const hints: string[] = [];

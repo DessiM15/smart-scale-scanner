@@ -9,7 +9,7 @@
  * a cron box, and a serverless job.
  */
 import { spawn, type ChildProcess } from "node:child_process";
-import { existsSync, mkdtempSync, rmSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
@@ -45,6 +45,32 @@ export interface Viewport {
   mobile: boolean;
 }
 
+/** A response came from an address the launch options refuse (a private network, the machine itself). */
+export class RefusedResponse extends Error {}
+
+/** What a navigation produced. `loadMs` is null when the load event never fired inside the timeout. */
+export interface NavResult {
+  status: number | null;
+  mimeType: string;
+  loadMs: number | null;
+  /** Bytes over the wire for everything fetched up to the end of the settle period. */
+  bytes: number;
+}
+
+export interface LaunchOptions {
+  /** Pass --no-sandbox. Defaults to the SSA_NO_SANDBOX environment variable. */
+  noSandbox?: boolean;
+  /** Chrome's --host-resolver-rules value, to pin a hostname to a vetted address. */
+  hostResolverRules?: string;
+  /** Appended to Chrome's own user agent, so a site owner can see who visited. */
+  userAgentSuffix?: string;
+  /**
+   * Called with the address each response came from. Return false to
+   * refuse it: the navigation fails and the page is not read.
+   */
+  allowAddress?: (ip: string, url: string) => boolean;
+}
+
 export const DESKTOP: Viewport = { width: 1366, height: 900, mobile: false };
 export const MOBILE: Viewport = { width: 390, height: 844, mobile: true };
 /** 320px wide is what a 1280px desktop looks like at 400% zoom: the WCAG reflow test. */
@@ -55,31 +81,44 @@ export class Chrome {
   private readonly ws: WebSocket;
   private readonly profileDir: string;
 
-  private constructor(proc: ChildProcess, ws: WebSocket, profileDir: string) {
+  /** The full user agent pages send, when a suffix was asked for. */
+  userAgent: string | undefined;
+
+  private constructor(proc: ChildProcess, ws: WebSocket, profileDir: string, options: LaunchOptions) {
     this.proc = proc;
     this.ws = ws;
     this.profileDir = profileDir;
+    this.options = options;
   }
 
   private nextId = 1;
   private readonly pending = new Map<number, { resolve: (m: CdpMessage) => void; reject: (e: Error) => void }>();
   private readonly listeners = new Map<string, Set<(params: any) => void>>();
 
-  static async launch(): Promise<Chrome> {
+  /** Set per browser at launch; pages read them. */
+  readonly options: LaunchOptions;
+
+  static async launch(options: LaunchOptions = {}): Promise<Chrome> {
     const exe = findChrome();
-    const port = 9400 + Math.floor(Math.random() * 400);
     const profileDir = mkdtempSync(join(tmpdir(), "ssa-chrome-"));
+    // The sandbox stays on unless asked otherwise: a scan opens strangers'
+    // pages. Set SSA_NO_SANDBOX=1 where the sandbox cannot run (a container
+    // without user namespaces, or running as root).
+    const noSandbox = options.noSandbox ?? process.env.SSA_NO_SANDBOX === "1";
     const proc = spawn(
       exe,
       [
         "--headless=new",
         "--disable-gpu",
-        "--no-sandbox",
+        ...(noSandbox ? ["--no-sandbox"] : []),
+        ...(options.hostResolverRules ? [`--host-resolver-rules=${options.hostResolverRules}`] : []),
         "--hide-scrollbars",
         "--mute-audio",
         "--no-first-run",
         "--disable-extensions",
-        `--remote-debugging-port=${port}`,
+        // Port 0 lets Chrome pick a free port and write it to the profile
+        // folder, so two scans (or two browsers in one scan) never collide.
+        "--remote-debugging-port=0",
         `--user-data-dir=${profileDir}`,
         "about:blank",
       ],
@@ -88,6 +127,7 @@ export class Chrome {
     let wsUrl = "";
     for (let i = 0; i < 40 && !wsUrl; i++) {
       try {
+        const port = Number(readFileSync(join(profileDir, "DevToolsActivePort"), "utf8").split("\n")[0]);
         const r = await fetch(`http://127.0.0.1:${port}/json/version`);
         wsUrl = (await r.json()).webSocketDebuggerUrl;
       } catch {
@@ -103,8 +143,14 @@ export class Chrome {
       ws.onopen = () => resolve();
       ws.onerror = () => reject(new Error("Could not connect to Chrome."));
     });
-    const chrome = new Chrome(proc, ws, profileDir);
+    const chrome = new Chrome(proc, ws, profileDir, options);
     ws.onmessage = (ev) => chrome.onMessage(JSON.parse(String(ev.data)));
+    // A scanned page must never leave a file behind.
+    await chrome.send("Browser.setDownloadBehavior", { behavior: "deny" });
+    if (options.userAgentSuffix) {
+      const { userAgent } = await chrome.send("Browser.getVersion");
+      chrome.userAgent = `${userAgent} ${options.userAgentSuffix}`;
+    }
     return chrome;
   }
 
@@ -143,6 +189,7 @@ export class Chrome {
     const page = new Page(this, targetId, sessionId);
     await page.send("Page.enable");
     await page.send("Runtime.enable");
+    if (this.userAgent) await page.send("Network.setUserAgentOverride", { userAgent: this.userAgent });
     await page.setViewport(viewport);
     return page;
   }
@@ -197,27 +244,52 @@ export class Page {
    * Navigate and wait for the load event, then a settle period for the
    * animations and lazy content that real visitors also wait through.
    */
-  async goto(url: string, settleMs = 4000, timeoutMs = 30000): Promise<{ status: number | null }> {
+  async goto(url: string, settleMs = 4000, timeoutMs = 30000): Promise<NavResult> {
     let status: number | null = null;
+    let mimeType = "";
+    let bytes = 0;
+    let loadMs: number | null = null;
+    let refused: string | null = null;
+    const allow = this.chrome.options.allowAddress;
     const offResp = this.chrome.on(this.sessionId, "Network.responseReceived", (p) => {
-      if (p?.type === "Document" && status === null) status = p.response?.status ?? null;
+      const ip = p?.response?.remoteIPAddress;
+      if (allow && ip && !allow(String(ip).replace(/^\[|\]$/g, ""), String(p.response?.url ?? ""))) {
+        refused = refused ?? String(p.response?.url ?? ip).slice(0, 120);
+        // Stop reading from a place the scan must not see.
+        this.send("Page.stopLoading").catch(() => {});
+      }
+      if (p?.type === "Document" && status === null) {
+        status = p.response?.status ?? null;
+        mimeType = p.response?.mimeType ?? "";
+      }
+    });
+    const offBytes = this.chrome.on(this.sessionId, "Network.loadingFinished", (p) => {
+      bytes += Number(p?.encodedDataLength) || 0;
     });
     await this.send("Network.enable");
+    const started = Date.now();
     const loaded = new Promise<void>((resolve) => {
       const off = this.chrome.on(this.sessionId, "Page.loadEventFired", () => {
         off();
+        loadMs = Date.now() - started;
         resolve();
       });
     });
     const nav = await this.send("Page.navigate", { url });
     if (nav?.errorText) {
       offResp();
+      offBytes();
       throw new Error(`Navigation failed: ${nav.errorText}`);
     }
     await Promise.race([loaded, sleep(timeoutMs)]);
     await sleep(settleMs);
     offResp();
-    return { status };
+    offBytes();
+    if (refused) {
+      await this.send("Page.navigate", { url: "about:blank" }).catch(() => {});
+      throw new RefusedResponse(refused);
+    }
+    return { status, mimeType, loadMs, bytes };
   }
 
   /** Run an expression in the page and return its JSON value. Promises are awaited. */

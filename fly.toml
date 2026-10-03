@@ -1,0 +1,40 @@
+# Fly.io configuration for the scan service.
+#
+# First deploy, from this folder, once the Fly account exists:
+#   fly launch --no-deploy --copy-config --name smart-scale-scan
+#   fly secrets set SSA_WORKER_SECRET=<the same value the website holds>
+#   fly deploy
+#   curl https://smart-scale-scan.fly.dev/health
+#
+# The machine stops when idle and starts on the first request, so a scan
+# that arrives after a quiet spell waits a few seconds longer. Memory is
+# 2 GB because lead mode runs two Chrome processes at once.
+
+app = "smart-scale-scan"
+primary_region = "dfw"
+
+[build]
+
+[env]
+  SSA_CALLBACK_HOST = "smartscaleagent.com"
+  SSA_QUEUE_MAX = "10"
+  # Set to "1" only if Chrome refuses to start in the sandbox on this host.
+  # SSA_NO_SANDBOX = "1"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [[http_service.checks]]
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "15s"
+    method = "GET"
+    path = "/health"
+
+[[vm]]
+  size = "shared-cpu-2x"
+  memory = "2gb"

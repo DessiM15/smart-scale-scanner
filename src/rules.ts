@@ -140,6 +140,81 @@ export const RULES: Record<string, RuleText> = {
   },
 };
 
+/**
+ * A business owner's headline for each axe rule, used in the lead report.
+ * axe's own help text ("Elements must meet minimum color contrast ratio
+ * thresholds") is written for developers.
+ */
+const RULE_TITLES: Record<string, string> = {
+  "button-name": "Buttons with no name",
+  "link-name": "Links with no text",
+  "image-alt": "Pictures with no description",
+  label: "Form fields with no label",
+  "select-name": "Dropdowns with no label",
+  "heading-order": "Headings out of order",
+  "page-has-heading-one": "No main heading",
+  "empty-heading": "Empty headings",
+  region: "Content outside the page's main areas",
+  "landmark-one-main": "No main content area",
+  "landmark-unique": "Navigation areas a screen reader cannot tell apart",
+  "landmark-complementary-is-top-level": "A sidebar nested in the wrong place",
+  "skip-link": "Skip link goes nowhere",
+  bypass: "No way to skip the navigation",
+  "frame-title": "Embedded frame without a title",
+  "target-size": "Buttons too small to tap",
+  "aria-hidden-focus": "Hidden controls can be tabbed to",
+  "scrollable-region-focusable": "A scrolling area the keyboard cannot reach",
+  "html-has-lang": "Page language not declared",
+  "document-title": "Page has no title",
+  "aria-prohibited-attr": "Labels placed where they are ignored",
+  "aria-allowed-role": "Elements given the wrong role",
+  "nested-interactive": "Controls nested inside other controls",
+  "link-in-text-block": "Links that look like plain text",
+  "meta-viewport": "Zooming is blocked on phones",
+  "video-caption": "Video with no captions",
+  tabindex: "Keyboard order is scrambled",
+  list: "Lists built incorrectly",
+  listitem: "List items outside a list",
+  "duplicate-id-aria": "Labels pointing at the wrong element",
+  "input-button-name": "Submit button with no text",
+};
+
+export function ruleTitle(id: string, fallbackHelp: string): string {
+  return RULE_TITLES[id] ?? fallbackHelp;
+}
+
+/**
+ * Plain wording for the keyboard, structure, motion and zoom findings in
+ * the lead report. The full report's wording names elements and how they
+ * are hidden; a visitor's report says what is wrong and who it affects,
+ * and stops there.
+ */
+const FLAG_PLAIN: Record<string, string> = {
+  "no-skip-link": "There is no way to skip past the navigation. Someone using a keyboard has to tab through every menu item on every page before reaching the content.",
+  "skip-link-broken": "The page has a \"skip to content\" link, but it points at nothing, so it does not work.",
+  "invisible-focus": "When someone moves through the page with the keyboard, nothing shows where they are. Without a visible outline, the site cannot be used without a mouse.",
+  "hidden-focus": "Keyboard users land on controls they cannot see, usually inside a closed menu, drawer or pop-up. They are tabbing through something invisible.",
+  "focus-trap": "The keyboard gets stuck on one control and cannot move past it, so everything after that point is unreachable without a mouse.",
+  "no-main-landmark": "The page does not mark where its main content is, so screen reader users cannot jump to it.",
+  "missing-lang": "The page does not say what language it is in, so screen readers may read it with the wrong voice.",
+  "multiple-h1": "The page has more than one main heading, so a screen reader user cannot tell which is the title.",
+  "no-h1": "The page has no main heading, so there is no title to orient by.",
+  "heading-skips": "Heading levels skip. Screen reader users skim a page by its headings the way sighted people skim by eye, and a skipped level breaks the outline.",
+  "iframe-title": "An embedded frame (a map, a booking calendar, a video) has no title. Screen readers announce \"frame\" and nothing else.",
+  "new-tab-hint": "Links open in a new tab without saying so, which is disorienting for screen reader users and people who rely on the Back button.",
+  autoplay: "Video or audio starts playing by itself and offers no way to pause it.",
+  "long-animation": "Something on the page moves for more than five seconds (a ticker, a carousel) and there is no pause button. Moving content makes pages hard to read for many people.",
+  overlay: "An accessibility overlay widget is installed. These widgets do not fix the underlying problems, get in the way of real screen readers, and are named in lawsuits.",
+  "filename-alt": "Some picture descriptions are just file names, which tell a blind visitor nothing.",
+  "unnamed-navs": "The page has several navigation areas with no names, so a screen reader cannot tell them apart.",
+  "ignores-reduced-motion": "Some visitors set their device to reduce motion because movement makes them unwell. The site keeps animating anyway.",
+  reflow: "When the page is zoomed in, as low-vision visitors do, it scrolls sideways and text is cut off.",
+};
+
+export function flagPlain(id: string, fallbackDetail: string): string {
+  return FLAG_PLAIN[id] ?? fallbackDetail;
+}
+
 export function ruleText(id: string, fallbackHelp: string): RuleText {
   return RULES[id] ?? { plain: fallbackHelp, fix: `Resolve every instance of "${fallbackHelp}" (axe rule ${id}); see the rule's help page for the exact requirement.` };
 }

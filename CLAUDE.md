@@ -2,7 +2,7 @@
 
 Read this first when picking the project back up. The README describes what the tool is; this file says where the work stands and what is next.
 
-## Where we are (2026-09-27)
+## Where we are (2026-10-01)
 
 - **v0.1 is on main and works end to end.** `node src/cli.ts scan <url>` produces `report.html`, `ACCESSIBILITY-FIX.md` and `scan.json`; `compare` diffs two scans. Tested on smartscaleagent.com (near clean), mextacohouse.com (34 problems, the rich example) and loved-beauty.vercel.app.
 - **It has already found one bug axe and a manual pass both missed:** smartscaleagent.com's navbar keeps two desktop layouts in the page and fades one out; the hidden one still had eight tabbable links. Fixed with `inert` in smart-scale-website-official PR #63. That is the keyboard walk earning its keep, and the story to tell when selling this.
@@ -10,21 +10,31 @@ Read this first when picking the project back up. The README describes what the 
 - **andrethomaslaw.com is done: 9 → 0 (2026-09-28-after, `compare.json` alongside).** The rescan exposed four scanner blind spots, all fixed the same day: English-only wording checks for skip links, new-tab hints and pause buttons (the Spanish pages were clean but flagged), and Chrome's native date input, whose month/day/year sub-fields read as a focus trap with no visible focus. The baseline's "focus trap" was that date input, never a real trap; say so if the before/after is ever shown to the client.
 - **ascension-group-landing-page.vercel.app scanned 2026-09-28 (13 problems, `scans/.../2026-09-28-before`).** Repo is `~/Desktop/Ascension Athlete Group`; a hand-annotated `ACCESSIBILITY-FIX.md` with file:line references is in it, not yet committed there. Rescan into a `-after` folder once the fixes land.
 - **Fix files are already in each client repo** as `ACCESSIBILITY-FIX.md` (written by hand on 2026-09-25, before the generator existed). The generator's output is close to them but not identical; when regenerating, keep the hand-written manual-check items if they are more specific.
+- **The free website check is being built (started 2026-10-01).** The whole project (public check page, "Website Business" portal section, weekly postcards to new Texas businesses) is specified in the website repo as `WEBSITE-BUSINESS-SPEC.md`; this repo's share is `SCAN-SERVICE-SPEC.md`. **Phase 1 is done:** `ssa scan <url> --lead` runs the three-page public scan with the new search pass and writes `lead.json`, the visitor's report (37 to 53 seconds on smartscaleagent.com, mextacohouse.com and wordpress.org). **Phase 2 is built (2026-10-02):** the HTTP scan service (`src/server.ts`, `src/service/`), with request signing, the private-address guard (DNS check, pinned address, every response's address checked), a one-at-a-time queue with signed callbacks, `Dockerfile` and `fly.toml`. Run it locally with `SSA_WORKER_SECRET=x SSA_CALLBACK_HOST=smartscaleagent.com npm run serve`. **Not yet deployed:** that waits on the Fly.io account; the commands are at the top of `fly.toml`. After the deploy, the work moves to the website repo (Phase 3 of `WEBSITE-BUSINESS-SPEC.md`).
+- **`npm test` scans a fixture site with a real Chrome** (about two and a half minutes for both test files). It pins the lead report's contents, checks that the full scan's summary still equals `test/expected-full-summary.json`, and exercises the service: signing, the address guard, the queue limit, callbacks, and one real scan through HTTP. If a full-scan check changes on purpose, regenerate that file and say why in the commit.
 
 ## How the code is organized
 
 ```
-src/cli.ts              commands and the summary builder (site-level flags live here)
-src/browser.ts          Chrome over CDP, Node's built-in WebSocket; no Puppeteer
-src/crawl.ts            sitemap-then-links page discovery, stack detection
+src/cli.ts              commands: argument parsing and writing files
+src/server.ts           the scan service: HTTP endpoints, settings from the environment
+src/service/jobs.ts     the queue (one scan at a time), job state, signed callbacks with retries
+src/service/guard.ts    public-address checks: hostname rules, DNS lookup, private ranges for v4 and v6
+src/service/signing.ts  HMAC request signing shared with the website
+src/scan.ts             runScan (full) and runLeadScan (public); the summary builder (site-level flags live here)
+src/lead.ts             the visitor's report: two sections, ratings, top three; no fix text
+src/browser.ts          Chrome over CDP, Node's built-in WebSocket; no Puppeteer. Launch options: sandbox, pinned host, user agent, address guard
+src/crawl.ts            sitemap-then-links page discovery, lead page picking, stack detection
 src/checks/axe.ts       axe-core run, contrast grouped by color pair
 src/checks/keyboard.ts  real Tab-key walk
 src/checks/structure.ts outline, landmarks, media, overlays, reduced-motion recheck
 src/checks/reflow.ts    320px reflow (400% zoom)
-src/rules.ts            plain-English meaning + fix per axe rule id
+src/checks/seo.ts       search basics, lead mode only: titles, https, robots, sitemap, schema, speed
+src/rules.ts            plain-English meaning + fix per axe rule id; owner-facing titles and flag wording for the lead report
 src/report/html.ts      client report
 src/report/fixfile.ts   ACCESSIBILITY-FIX.md generator
 src/compare.ts          before/after
+test/                   fixture site, its server, and the scan tests
 ```
 
 Conventions that matter:
@@ -34,6 +44,9 @@ Conventions that matter:
 - **One finding = one problem.** `summary.problems` counts distinct rules + distinct contrast color pairs + distinct site-level flags, not elements. Clients get a number they can act on. Do not add checks that inflate it with duplicates; the structure flags are deduped against axe rules in `summarize()`.
 - **Never claim compliance.** Report, fix file and license all say a scan is not a legal certification. Keep it that way in any new output.
 - **Chrome path:** looked up in `browser.ts`; `SSA_CHROME` overrides.
+- **Chrome's sandbox is on by default** since 2026-10-02 (it used to pass `--no-sandbox` always). `SSA_NO_SANDBOX=1` turns it off where it cannot run. The CLI on a Mac needs nothing.
+- **The lead report gives nothing away.** `lead.json` says what is wrong in plain words: no fix instructions, no HTML samples, no selectors, no score, and never the word compliant. The test enforces it. Search findings must not promise a ranking.
+- **The full scan must not change by accident.** The search pass and the lead report run in lead mode only; `runScan` output is pinned by the test.
 
 ## Known rough edges
 
@@ -44,8 +57,13 @@ Conventions that matter:
 - Reflow runs on the first three pages only, reduced-motion on the home page only, to keep a scan under two minutes.
 - No login, no cart state, no dialog probing yet.
 - The `hiddenBy` field on a hidden focus stop names the ancestor and how it hides (`opacity:0`, `aria-hidden`, ...). Useful; not yet in the HTML report.
+- Instance counts in the full report add the desktop and phone passes together, so one unnamed button reads as "2 instances". The lead report counts it once (`instances()` in `lead.ts`); the full report and fix file still double it.
+- Lead mode runs two Chrome processes at once (desktop passes in one, phone-width passes and reflow in the other). That is what keeps it under a minute, and it is why the scan service wants 2 GB of memory.
+- The lead scan's speed finding is measured on a fast connection with no throttling, so it only catches pages that are slow or heavy outright (over 4 seconds or 3 MB).
 
 ## Next (in order)
+
+First, the free website check: deploy the scan service (top of `fly.toml`, needs the Fly account), then Phase 3 onward in the website repo. It replaces item 6 below and comes before the rest.
 
 1. **Dialog and drawer probe.** Find the first element with `role=dialog` or the first button whose name suggests a menu/cart/search, activate it with the keyboard, then check: focus moved inside, Tab stays inside, Escape closes, focus returns. This catches the Loved Beauty cart bug as a positive test, not just via aria-hidden.
 2. **Empty-form probe.** Find the main form, press Enter in it empty, and check that error text appeared, is associated (`aria-describedby`) and that focus moved to the first invalid field.

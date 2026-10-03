@@ -1,0 +1,153 @@
+{
+  "pages": 4,
+  "pagesWithErrors": 0,
+  "axeViolations": 14,
+  "contrastElements": 2,
+  "contrastGroups": [
+    {
+      "fg": "#c9c9c9",
+      "bg": "#ffffff",
+      "fontSize": "12.0pt (16px)",
+      "ratio": 1.65,
+      "required": 4.5,
+      "count": 2,
+      "classes": "",
+      "sample": "This paragraph is too faint to read."
+    }
+  ],
+  "byRule": [
+    {
+      "id": "button-name",
+      "help": "Buttons must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+      "impact": "critical",
+      "count": 2,
+      "pages": [
+        "/"
+      ],
+      "samples": [
+        {
+          "html": "<button class=\"icon\"></button>",
+          "message": "Element does not have inner text that is visible to screen readers"
+        }
+      ]
+    },
+    {
+      "id": "image-alt",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+      "impact": "critical",
+      "count": 2,
+      "pages": [
+        "/"
+      ],
+      "samples": [
+        {
+          "html": "<img src=\"/pixel.png\" width=\"40\" height=\"40\">",
+          "message": "Element does not have an alt attribute"
+        }
+      ]
+    },
+    {
+      "id": "heading-order",
+      "help": "Heading levels should only increase by one",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/heading-order?application=axeAPI",
+      "impact": "moderate",
+      "count": 2,
+      "pages": [
+        "/menu.html"
+      ],
+      "samples": [
+        {
+          "html": "<h3>Coffee</h3>",
+          "message": "Heading order invalid"
+        }
+      ]
+    },
+    {
+      "id": "label",
+      "help": "Form elements must have labels",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/label?application=axeAPI",
+      "impact": "critical",
+      "count": 2,
+      "pages": [
+        "/contact.html"
+      ],
+      "samples": [
+        {
+          "html": "<input type=\"text\" name=\"name\">",
+          "message": "Element does not have an implicit (wrapped) <label>"
+        }
+      ]
+    },
+    {
+      "id": "html-has-lang",
+      "help": "<html> element must have a lang attribute",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/html-has-lang?application=axeAPI",
+      "impact": "serious",
+      "count": 2,
+      "pages": [
+        "/missing.html"
+      ],
+      "samples": [
+        {
+          "html": "<html><head><title>Not found</title></head><body><h1>Not found</h1></body></html>",
+          "message": "The <html> element does not have a lang attribute"
+        }
+      ]
+    },
+    {
+      "id": "landmark-one-main",
+      "help": "Document should have one main landmark",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-one-main?application=axeAPI",
+      "impact": "moderate",
+      "count": 2,
+      "pages": [
+        "/missing.html"
+      ],
+      "samples": [
+        {
+          "html": "<html><head><title>Not found</title></head><body><h1>Not found</h1></body></html>",
+          "message": "Fix all of the following:\n  Document does not have a main landmark"
+        }
+      ]
+    },
+    {
+      "id": "region",
+      "help": "All page content should be contained by landmarks",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=axeAPI",
+      "impact": "moderate",
+      "count": 2,
+      "pages": [
+        "/missing.html"
+      ],
+      "samples": [
+        {
+          "html": "<h1>Not found</h1>",
+          "message": "Some page content is not contained by landmarks"
+        }
+      ]
+    }
+  ],
+  "flags": [
+    {
+      "id": "no-skip-link",
+      "severity": "moderate",
+      "title": "No skip link",
+      "detail": "The first Tab press should offer a link past the navigation to the main content. A keyboard user must otherwise tab through every menu item on every page.",
+      "pages": [
+        "/contact.html"
+      ]
+    },
+    {
+      "id": "missing-lang",
+      "severity": "serious",
+      "title": "Page language not declared",
+      "detail": "The <html> element has no lang attribute.",
+      "pages": [
+        "/missing.html"
+      ]
+    }
+  ],
+  "problems": 10
+}

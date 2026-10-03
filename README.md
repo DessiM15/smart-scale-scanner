@@ -33,8 +33,19 @@ Options for `scan`:
 | `--label "Name"` | The business name on the report. |
 | `--desktop-only` | Skip the phone-width pass. |
 | `--quick` | Skip reflow and reduced-motion passes. |
+| `--lead` | The short public scan (below). Writes `lead.json` and `scan.json`, no report or fix file. |
 
 Set `SSA_CHROME` to a browser executable if the usual locations don't have one.
+
+### The lead scan
+
+`ssa scan https://example.com --lead` is the scan behind the free website check on smartscaleagent.com. It checks the home page and up to two more pages picked from the site's navigation, at both widths, in under a minute, and adds a search pass. The result, `lead.json`, is what a visitor is shown: two sections (Accessibility, Getting found on Google), a rating for each (good, fair, needs work), every problem in plain words, and the three to lead with. It contains no fix instructions and no score.
+
+`npm test` runs both kinds of scan against a small fixture site with a real Chrome.
+
+### The scan service
+
+`npm run serve` starts the HTTP service the website calls (`src/server.ts`): `POST /scans` queues a lead scan, the result goes back to the website as a signed callback, and `GET /scans/{id}` returns the state. It needs `SSA_WORKER_SECRET` and `SSA_CALLBACK_HOST`. It only scans public websites: hostnames are resolved and checked against private ranges before a scan, pinned for the scan, and every response's address is checked during it. `Dockerfile` and `fly.toml` deploy it.
 
 ## What it checks
 
@@ -48,6 +59,8 @@ Set `SSA_CHROME` to a browser executable if the usual locations don't have one.
 
 **Reflow** (first three pages): renders at 320px wide, the equivalent of 400% zoom, and flags sideways scrolling with the elements that cause it.
 
+**Search basics** (lead scan only): whether the site asks Google not to list it, loads securely, has distinct page titles, descriptions, a phone layout, business details in structured data, a sitemap, working navigation links, a tappable phone number and a share preview, and whether the home page is slow or heavy on a phone. It reports what is missing or broken. It does not measure rankings.
+
 ## What it does not do
 
 It does not certify compliance, and nothing can promise a business will never receive a demand letter. Automated checks find roughly a third of real accessibility problems; the fix file ends with the manual checks a person still has to run (screen reader, forms, dialogs, zoom). It does not scan behind logins or through a checkout with items in the cart yet.
@@ -56,12 +69,17 @@ It does not certify compliance, and nothing can promise a business will never re
 
 ```
 src/cli.ts              commands: scan, report, fix, compare
+src/server.ts           the scan service (HTTP)
+src/service/            queue and callbacks, public-address guard, request signing
+src/scan.ts             the full scan and the lead scan; the summary builder
+src/lead.ts             the visitor's report from a lead scan
 src/browser.ts          Chrome over the DevTools Protocol (no Puppeteer, no Playwright)
 src/crawl.ts            page discovery (sitemap, then links) and stack detection
 src/checks/axe.ts       axe-core run and contrast grouping
 src/checks/keyboard.ts  the Tab walk
 src/checks/structure.ts outline, landmarks, media, overlays; reduced-motion recheck
 src/checks/reflow.ts    320px reflow
+src/checks/seo.ts       search basics (lead scan only)
 src/rules.ts            plain-English meaning and fix per axe rule
 src/report/html.ts      the client report
 src/report/fixfile.ts   ACCESSIBILITY-FIX.md

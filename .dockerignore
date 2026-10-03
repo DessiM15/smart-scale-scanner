@@ -1,0 +1,7 @@
+node_modules
+.scans
+scans
+test
+*.log
+*.md
+.git
