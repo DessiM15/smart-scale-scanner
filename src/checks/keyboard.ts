@@ -78,7 +78,12 @@ const STOP_SNAPSHOT = `
   })()
 `;
 
-export async function keyboardWalk(page: Page, maxStops = 80): Promise<KeyboardResult> {
+/**
+ * `budgetMs` ends the walk early on a page where every key press is slow (a
+ * heavy page on a small machine). What was seen up to then is still judged.
+ */
+export async function keyboardWalk(page: Page, maxStops = 80, budgetMs = Infinity): Promise<KeyboardResult> {
+  const started = Date.now();
   await page.evaluate(`(() => { window.scrollTo(0, 0); document.activeElement && document.activeElement.blur && document.activeElement.blur(); return true; })()`);
   const stops: FocusStop[] = [];
   const embeddedFrames: string[] = [];
@@ -87,6 +92,7 @@ export async function keyboardWalk(page: Page, maxStops = 80): Promise<KeyboardR
   let repeat = 0;
   let inFrame = 0;
   for (let i = 0; i < maxStops; i++) {
+    if (Date.now() - started > budgetMs) break;
     await page.pressKey("Tab");
     await sleep(120);
     let s = await page.evaluate<Omit<FocusStop, "index">>(STOP_SNAPSHOT);

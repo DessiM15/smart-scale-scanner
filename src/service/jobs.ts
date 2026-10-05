@@ -75,6 +75,11 @@ export class Jobs {
     return this.jobs.get(scanId);
   }
 
+  /** True while a scan is running or waiting. */
+  get busy(): boolean {
+    return this.running || this.queue.length > 0;
+  }
+
   /** The number waiting, not counting the one running. */
   get waiting(): number {
     return this.queue.length;

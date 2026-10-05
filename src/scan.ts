@@ -25,7 +25,13 @@ interface PageOptions {
   /** Keep the load time and page weight. */
   recordLoad?: boolean;
   timeoutMs?: number;
+  /** Pause video and audio once the page has loaded, so they do not eat the processor during the checks. */
+  quietMedia?: boolean;
+  /** The longest the keyboard walk may take. */
+  keyboardBudgetMs?: number;
 }
+
+const QUIET_MEDIA = `(() => { document.querySelectorAll("video,audio").forEach((m) => { try { m.pause(); } catch {} }); return true; })()`;
 
 async function scanPage(page: Page, url: string, path: string, viewport: "desktop" | "mobile", full: boolean, options: PageOptions = {}): Promise<PageScan> {
   const rec: PageScan = { path, url, viewport, status: null, title: "" };
@@ -34,11 +40,12 @@ async function scanPage(page: Page, url: string, path: string, viewport: "deskto
     rec.status = nav.status;
     if (options.recordLoad) rec.load = { loadMs: nav.loadMs, bytes: nav.bytes };
     rec.title = await page.evaluate<string>("document.title");
+    if (options.quietMedia) await page.evaluate(QUIET_MEDIA);
     rec.axe = await runAxe(page);
     if (options.seo) rec.seo = await seoPageCheck(page);
     if (full) {
       rec.structure = await structureCheck(page);
-      rec.keyboard = await keyboardWalk(page);
+      rec.keyboard = await keyboardWalk(page, 80, options.keyboardBudgetMs);
     }
   } catch (e) {
     rec.error = String((e as Error).message ?? e).slice(0, 200);
@@ -236,6 +243,14 @@ const LEAD_NAV_TIMEOUT_MS = 20_000;
 const LEAD_SOFT_LIMIT_MS = 110_000;
 /** Whatever has finished by now is the report. */
 const LEAD_HARD_LIMIT_MS = 150_000;
+/**
+ * Autoplaying video decoded without a graphics card, in two browsers at
+ * once, can slow every step on the service's small machine until the scan
+ * runs out of time (taylormadeesthetics.net, 2026-10-05). The public scan
+ * pauses media after load and caps the keyboard walk. Autoplay is still
+ * reported: that check reads the page's markup, not whether it is playing.
+ */
+const LEAD_KEYBOARD_BUDGET_MS = 30_000;
 
 const CHALLENGE_TITLE = /just a moment|attention required|access denied|are you a robot|verify you are human|captcha/i;
 
@@ -296,7 +311,7 @@ export async function runLeadScan(options: LeadScanOptions): Promise<ScanResult>
       for (const path of paths) {
         if (desktopPages.length && elapsed() > LEAD_SOFT_LIMIT_MS) break;
         log(`  desktop ${path}`);
-        const rec = await scanPage(desktop, base + path, path, "desktop", true, { seo: true, timeoutMs: LEAD_NAV_TIMEOUT_MS });
+        const rec = await scanPage(desktop, base + path, path, "desktop", true, { seo: true, timeoutMs: LEAD_NAV_TIMEOUT_MS, quietMedia: true, keyboardBudgetMs: LEAD_KEYBOARD_BUDGET_MS });
         desktopPages.push(rec);
         if (desktopPages.length === 1) {
           step("keyboard");
@@ -311,7 +326,7 @@ export async function runLeadScan(options: LeadScanOptions): Promise<ScanResult>
       for (const path of paths) {
         if (mobilePages.length && elapsed() > LEAD_SOFT_LIMIT_MS) break;
         log(`  mobile  ${path}`);
-        mobilePages.push(await scanPage(mobile, base + path, path, "mobile", false, { recordLoad: true, timeoutMs: LEAD_NAV_TIMEOUT_MS }));
+        mobilePages.push(await scanPage(mobile, base + path, path, "mobile", false, { recordLoad: true, timeoutMs: LEAD_NAV_TIMEOUT_MS, quietMedia: true }));
       }
       await mobile.close();
       if (elapsed() < LEAD_SOFT_LIMIT_MS) {

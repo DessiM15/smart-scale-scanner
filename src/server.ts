@@ -116,7 +116,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   }
   const port = Number(process.env.PORT ?? 8080);
   const log = (m: string) => process.stderr.write(`${new Date().toISOString()} ${m}\n`);
-  const { server } = createService({ secret, callbackHost, queueMax: Number(process.env.SSA_QUEUE_MAX ?? 10), log });
+  const { server, jobs } = createService({ secret, callbackHost, queueMax: Number(process.env.SSA_QUEUE_MAX ?? 10), log });
   server.listen(port, () => log(`${TOOL_NAME} service v${TOOL_VERSION} listening on ${port}; callbacks to ${callbackHost}`));
   const stop = () => {
     log("stopping");
@@ -125,4 +125,24 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   };
   process.on("SIGTERM", stop);
   process.on("SIGINT", stop);
+
+  // On Fly the machine must not be stopped from outside: the proxy only
+  // sees open requests, so it stopped the machine in the middle of scans
+  // nobody was watching (2026-10-05). The service decides for itself. After
+  // a quiet spell with nothing running or waiting it exits, the machine
+  // stops, and the next request starts it again.
+  const idleSeconds = Number(process.env.SSA_IDLE_EXIT_SECONDS ?? 0);
+  if (idleSeconds > 0) {
+    let lastActive = Date.now();
+    server.on("request", (req) => {
+      if (!req.url?.startsWith("/health")) lastActive = Date.now();
+    });
+    setInterval(() => {
+      if (jobs.busy) lastActive = Date.now();
+      else if (Date.now() - lastActive > idleSeconds * 1000) {
+        log(`idle for ${idleSeconds}s`);
+        stop();
+      }
+    }, 5000).unref();
+  }
 }

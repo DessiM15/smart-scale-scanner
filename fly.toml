@@ -12,8 +12,11 @@
 # rewrites this file and adds a .github deploy workflow; undo both.
 #
 # The machine stops when idle and starts on the first request, so a scan
-# that arrives after a quiet spell waits a few seconds longer. Memory is
-# 2 GB because lead mode runs two Chrome processes at once.
+# that arrives after a quiet spell waits a few seconds longer. The service
+# stops itself (SSA_IDLE_EXIT_SECONDS): Fly's own auto-stop is off because
+# it cannot see a scan in progress and stopped the machine mid-scan. Lead mode
+# runs two Chrome processes at once, which is what the two processors and
+# the memory are for.
 
 app = "smart-scale-scan"
 primary_region = "dfw"
@@ -23,13 +26,14 @@ primary_region = "dfw"
 [env]
   SSA_CALLBACK_HOST = "smartscaleagent.com"
   SSA_QUEUE_MAX = "10"
+  SSA_IDLE_EXIT_SECONDS = "300"
   # Set to "1" only if Chrome refuses to start in the sandbox on this host.
   # SSA_NO_SANDBOX = "1"
 
 [http_service]
   internal_port = 8080
   force_https = true
-  auto_stop_machines = "stop"
+  auto_stop_machines = "off"
   auto_start_machines = true
   min_machines_running = 0
 
@@ -40,6 +44,14 @@ primary_region = "dfw"
     method = "GET"
     path = "/health"
 
+# A clean exit (idle) leaves the machine stopped; a crash restarts it.
+[[restart]]
+  policy = "on-failure"
+  retries = 5
+
+# Dedicated processors. The shared size is throttled after a short burst,
+# and a few scans in a row then ran three times slower and hit the scan's
+# time limit (measured 2026-10-05). It is billed only while it runs.
 [[vm]]
-  size = "shared-cpu-2x"
-  memory = "2gb"
+  size = "performance-2x"
+  memory = "4gb"
